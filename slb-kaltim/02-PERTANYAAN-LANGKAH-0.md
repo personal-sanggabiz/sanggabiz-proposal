@@ -1,4 +1,4 @@
-# PERTANYAAN LANGKAH 0 — untuk Pak Priyo
+# PERTANYAAN LANGKAH 0 untuk Pak Priyo
 
 > **Sebagian sudah terjawab** lewat chat 6 Okt (lihat `05-INFO-PRIMER-PAK-PRIYO.md`). Tabel jawaban di bawah sudah diisi. Yang tersisa: pembayar, budget, tanggal, jalur undangan.
 
@@ -18,7 +18,7 @@ Kirim satu pesan (bahasa chat, bukan formal). Draf:
 | # | Pertanyaan | Jawaban | Tanggal |
 |---|---|---|---|
 | 1 | Pemberi dana/klien | Tidak disebut. Nauval: "Ketok ke pemda sana nanti" | 6 Okt |
-| 2 | Skala (guru/sekolah) | "target 80 orang"; jumlah sekolah tidak disebut | 6 Okt |
+| 2 | Skala (guru/sekolah) | "target 80 orang". Jumlah sekolah tidak disebut | 6 Okt |
 | 3 | Range budget | Tanpa angka. "Ksh aja penawaran" | 6 Okt |
 | 4 | Timeline | Tanggal tidak disebut. "Setengah hari, offline." "Balikpapan" | 6 Okt |
 | 5 | Ekspektasi topik | "Silakan diajukan". Goal: "capacity building pada guru2 SLB/inklusi" | 6 Okt |

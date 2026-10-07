@@ -1,3 +1,4 @@
+<!-- salinan-sumber -->
 # LANGKAH KERJA — Proposal Pelatihan Guru SLB/Inklusif Balikpapan
 Salinan teks dari `sumber/Langkah Mematangkan Ide SLB Kaltim.docx` (catatan kerja Sanggabiz). Dokumen asli tetap disimpan di `sumber/`.
 

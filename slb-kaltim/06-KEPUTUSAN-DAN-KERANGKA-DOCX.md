@@ -7,7 +7,7 @@ Dibuat 7 Okt 2026. Sumber: jawaban Muchson + informasi dari teman Muchson + chat
 |---|---|
 | Format dokumen | **DOCX, portrait** (A4 diasumsikan) |
 | Isi | **Program end to end**, berbentuk proposal |
-| Fokus materi | **(b) Pembelajaran berdiferensiasi / adaptasi Kurikulum Merdeka untuk ABK** (dibaca dari jawaban "satu B"; koreksi jika salah) |
+| Fokus materi | **(b) Pembelajaran berdiferensiasi / adaptasi Kurikulum Merdeka untuk ABK** (dibaca dari jawaban "satu B", koreksi jika salah) |
 | Sasaran kekhususan | **Umum** (semua jenis ABK) |
 | Hasil nyata untuk peserta | **Template + modul ringkas** |
 | Pemateri | **Disediakan ruang/halaman saja.** Temannya yang mengisi |
@@ -36,7 +36,7 @@ Dibuat 7 Okt 2026. Sumber: jawaban Muchson + informasi dari teman Muchson + chat
 - Pak Priyo tidak punya daftar guru, jadi **bagian cara mengundang 80 orang harus ada** supaya klien tahu siapa yang bekerja.
 - Pengalaman Sanggabiz di pendidikan luar biasa belum ada (`03`). Keputusan cara menulis klaim masih menunggu Muchson (pertanyaan 17).
 
-## 5. Jawaban Muchson atas pertanyaan 4–17 (7 Okt 2026, kutipan)
+## 5. Jawaban Muchson atas pertanyaan 4 sampai 17 (7 Okt 2026, kutipan)
 | # | Topik | Jawaban Muchson |
 |---|---|---|
 | 4 | Ditujukan ke siapa | "iya kosongkan dulu buat general aja" |
