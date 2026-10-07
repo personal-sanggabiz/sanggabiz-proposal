@@ -1,4 +1,4 @@
-# INFO PRIMER — Chat dengan Pak Priyo (6 Okt 2026)
+# INFO PRIMER: Chat dengan Pak Priyo (6 Okt 2026)
 
 Isi file ini: **(A) kesimpulan** (hanya yang tertulis di chat, tanpa tafsiran) dan **(B) chat asli utuh** untuk dibedah lagi nanti. Jika kesimpulan dan chat berbeda, **chat asli yang benar**.
 
@@ -8,13 +8,13 @@ Isi file ini: **(A) kesimpulan** (hanya yang tertulis di chat, tanpa tafsiran) d
 | Jenis acara | "Pelatihan utk guru2 slb/inklusif" (Muchson) |
 | Durasi & format | "Setengah hari, offline." (Pak Priyo) |
 | Lokasi | "Balikpapan" (Pak Priyo) |
-| Materi | Muchson: "materinya bebas mas ? atau udah ada gambaran ?" → Pak Priyo: "Silakan diajukan" |
+| Materi | Muchson: "materinya bebas mas ? atau udah ada gambaran ?" Jawaban Pak Priyo: "Silakan diajukan" |
 | Goal | "Goalnya memberikan capacity building pada guru2 SLB/inklusi" |
 | Peserta | "Termasuk cari peserta ya" · "Cariin peserta" · "target 80 orang" |
 | Daftar guru | "G ada aku list gurunya" |
-| Ruang lingkup | "materi, pembicara, snack, tempat, dan peserta...target 80 orang" (versi Pak Priyo setelah "Ralat"; versi yang dikutip Muchson tidak ada "tempat") |
+| Ruang lingkup | "materi, pembicara, snack, tempat, dan peserta...target 80 orang" (versi Pak Priyo setelah "Ralat". Versi yang dikutip Muchson tidak ada "tempat") |
 | Tempat acara | Muchson menanyakan apakah tempat sudah ada. Pak Priyo meralat ruang lingkup dengan memasukkan "tempat" |
-| Budget | Nauval: "Budget berapa?" · Pak Priyo: "Kalo pake mobilisasi ya jd mahal" dan "Ksh aja penawaran" · Rohmatika: "Atur aja asal murah / Kok budgetnya mepet terus pertamini 😭". **Tidak ada angka.** |
+| Budget | Nauval: "Budget berapa?" · Pak Priyo: "Kalo pake mobilisasi ya jd mahal" dan "Ksh aja penawaran" · Rohmatika: "Atur aja asal murah" dan "Kok budgetnya mepet terus pertamini" (emoji ada di chat asli). **Tidak ada angka.** |
 | Ke mana diajukan | Nauval: "Ketok ke pemda sana nanti" |
 | Tanggal pelaksanaan | **Tidak disebut** |
 | Nama klien/pemberi dana | **Tidak disebut** |
@@ -48,5 +48,5 @@ G ada aku list gurunya
 ```
 
 ## C. Bahan untuk dibedah nanti (catatan, belum diputuskan)
-- Chat ini **bertentangan** dengan beberapa isi `01-LANGKAH-KERJA.md` (mis. durasi 2–3 hari, ToT) dan asumsi di `02-PERTANYAAN-LANGKAH-0.md`. Belum ada yang diubah di dua file itu selain tabel jawaban.
+- Chat ini **bertentangan** dengan beberapa isi `01-LANGKAH-KERJA.md` (misalnya durasi 2 sampai 3 hari, ToT) dan asumsi di `02-PERTANYAAN-LANGKAH-0.md`. Belum ada yang diubah di dua file itu selain tabel jawaban.
 - Arti "pertamini" dan "ketok ke pemda" **belum ditafsirkan**. Perlu dibahas bersama tim atau ditanyakan ke Pak Priyo/Nauval.

@@ -1,5 +1,7 @@
-# PROPOSAL BARU — Pelatihan Guru SLB/Inklusif, Balikpapan (Kaltim)
+# PROPOSAL BARU: Pelatihan Guru SLB/Inklusif, Balikpapan (Kaltim)
 
+> Aturan penulisan: ikuti `../ATURAN-PENULISAN.md`. Cek dengan `python3 ../tools/cek-gaya.py slb-kaltim`.
+>
 > Proposal baru, **terpisah dari proposal Tanoto** (`../tanoto/`). Jangan mencampur aturan, aset, atau klaim kedua proyek.
 
 Dibuat: 7 Okt 2026 · Status: **Info primer dari Pak Priyo sudah masuk** (`05-INFO-PRIMER-PAK-PRIYO.md`). Riset Langkah 1 selesai sebagian
@@ -22,16 +24,21 @@ Nama klien/pemberi dana · tanggal pelaksanaan · angka budget. Makna "pertamini
 ## 3. Isi folder
 | File | Fungsi |
 |---|---|
-| `01-LANGKAH-KERJA.md` | Langkah 0–8 dari docx. **Dibuat sebelum info Pak Priyo**: durasi 2–3 hari, ToT, dan dugaan CSR sudah tidak berlaku (lihat `05`) |
+| `01-LANGKAH-KERJA.md` | Langkah 0 sampai 8 dari docx. **Dibuat sebelum info Pak Priyo**: durasi 2 sampai 3 hari, ToT, dan dugaan CSR sudah tidak berlaku (lihat `05`) |
 | `02-PERTANYAAN-LANGKAH-0.md` | Pesan siap kirim ke Pak Priyo + asumsi sementara |
 | `03-MODAL-SANGGABIZ.md` | Portofolio/aset Sanggabiz yang bisa dipakai, ditarik dari repo |
 | `05-INFO-PRIMER-PAK-PRIYO.md` | **Sumber utama.** Chat Pak Priyo, fakta, tafsiran, dampak ke rencana, komponen biaya |
 | `04-RISET-SLB-Balikpapan.md` | Hasil riset Langkah 1 (sekolah, kewenangan, regulasi, temuan yang mengubah rencana) |
+| `06-KEPUTUSAN-DAN-KERANGKA-DOCX.md` | Keputusan Muchson dan susunan bab proposal |
+| `07-RISET-TEMPAT-HARGA.md` | Harga paket meeting hotel Balikpapan |
+| `08-CATATAN-TIM.md` | **Mulai dari sini bila mau memakai proposal.** Daftar isian tim dan daftar cek sebelum kirim |
+| `proposal/` | **Proposal siap pakai (docx, portrait A4)** |
+| `_build/` | Skrip pembuat proposal dan grafik, beserta foto dan logo |
 | `sumber/` | File asli yang diterima (docx) |
 
 Berikutnya: data Dapodik lengkap, lalu opsi judul, paket Hemat/Standar/Ideal, dan draf proposal.
 
 ## 4. Format acuan di repo
-- `../reference/Proposal Training UMY.docx` — proposal training berbentuk dokumen
-- `../reference/Proposal Pelatihan UMKM Afirmatif - Kementerian UMKM.pptx` — proposal berbentuk deck
-- `../tanoto/01-ANALISIS-GAYA-Compro-Sanggabiz.md` — panduan gaya visual Sanggabiz (navy `#0B396D`, kuning `#FFC00C`, Montserrat; font ada di `../tanoto/fonts/`)
+- `../reference/Proposal Training UMY.docx`: proposal training berbentuk dokumen
+- `../reference/Proposal Pelatihan UMKM Afirmatif - Kementerian UMKM.pptx`: proposal berbentuk deck
+- `../tanoto/01-ANALISIS-GAYA-Compro-Sanggabiz.md`: panduan gaya visual Sanggabiz (navy `#0B396D`, kuning `#FFC00C`, Montserrat, font ada di `../tanoto/fonts/`)

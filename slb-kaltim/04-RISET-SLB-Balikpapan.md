@@ -1,4 +1,4 @@
-# RISET LANGKAH 1 — Peta Konteks SLB & Pendidikan Inklusif Balikpapan
+# RISET LANGKAH 1: Peta Konteks SLB dan Pendidikan Inklusif Balikpapan
 
 Disusun 7 Okt 2026 dari pencarian web. **Keterbatasan:** sandbox ini hanya bisa membaca ringkasan hasil pencarian. Situs Dapodik/Kemdikbud, ANTARA, dan jurnal tidak bisa dibuka langsung. Jadi angka di bawah **belum diverifikasi ke sumber primer**. Kolom "Keyakinan" menandai seberapa kuat tiap temuan.
 
@@ -28,8 +28,8 @@ Disusun 7 Okt 2026 dari pencarian web. **Keterbatasan:** sandbox ini hanya bisa 
 Versi terbaru semua regulasi **perlu dicek** sebelum dikutip di proposal.
 
 ## 4. Temuan yang mengubah rencana awal
-1. **Unmul tampaknya belum punya prodi PLB.** Komisi IV DPRD Kaltim mengusulkan kerja sama Pemprov–Unmul untuk membuka prodi PLB karena kurangnya guru berlatar PLB ([ANTARA](https://kaltim.antaranews.com/berita/197400/dprd-kaltim-minta-pemprov-tingkatkan-kualitas-slb)). Artinya ide "mahasiswa PLB Unmul sebagai asisten" di Langkah 4 **kemungkinan tidak jalan**. Alternatif: mahasiswa psikologi/PGSD/PGPAUD, atau kampus luar Kaltim yang punya PLB (mis. ULM Banjarmasin: [plb.ulm.ac.id](https://plb.ulm.ac.id/id/)). **Perlu konfirmasi ke Nauval.**
-2. **Kekurangan guru PLB di Kaltim itu sendiri jadi argumen kuat** proposal: masalah diakui DPRD, bukan sekadar hipotesis kita.
+1. **Unmul tampaknya belum punya prodi PLB.** Komisi IV DPRD Kaltim mengusulkan kerja sama Pemprov dan Unmul untuk membuka prodi PLB karena kurangnya guru berlatar PLB ([ANTARA](https://kaltim.antaranews.com/berita/197400/dprd-kaltim-minta-pemprov-tingkatkan-kualitas-slb)). Artinya ide "mahasiswa PLB Unmul sebagai asisten" di Langkah 4 **kemungkinan tidak jalan**. Alternatif: mahasiswa psikologi/PGSD/PGPAUD, atau kampus luar Kaltim yang punya PLB (mis. ULM Banjarmasin: [plb.ulm.ac.id](https://plb.ulm.ac.id/id/)). **Perlu konfirmasi ke Nauval.**
+2. **Kekurangan guru PLB di Kaltim itu sendiri jadi argumen kuat** proposal. Masalah ini diakui DPRD dan bukan hanya hipotesis kita.
 3. **CSR Pertamina RU V Balikpapan** aktif di pendidikan dan lingkungan (KAPABEL di Kampung Atas Air, seragam sekolah, Gertak Sampah). **Tidak ditemukan program disabilitas/SLB** di sana ([CNBC Indonesia](https://www.cnbcindonesia.com/news/20250726195944-4-652480/mantap-pertamina-bagikan-bantuan-paket-seragam-sekolah-di-balikpapan), [Investortrust](https://investortrust.id/business/73825/dukung-indonesia-emas-pertamina-motivasi-anak-kampung-atas-air-unggul-dan-semangat-sekolah)). Jika klien memang Pertamina, program ini bisa dipasarkan sebagai **pilar baru** (inklusi), bukan lanjutan. Klien masih belum dikonfirmasi.
 
 ## 5. Validasi hipotesis Langkah 2 (dari literatur umum, bukan khusus Balikpapan)
@@ -50,4 +50,4 @@ Versi terbaru semua regulasi **perlu dicek** sebelum dikutip di proposal.
 ## 7. Langkah berikutnya yang disarankan
 - Muchson: kirim Langkah 0 ke Pak Priyo (`02-PERTANYAAN-LANGKAH-0.md`). Tambahkan satu pertanyaan: **apakah klien sudah punya kontak di Disdik Provinsi atau Kota?**
 - Tim: tanya Nauval apakah Unmul/kampus Kaltim punya prodi PLB, psikologi, atau PGSD yang bisa jadi mitra.
-- Setelah data Dapodik ada: lanjut Langkah 2–3 (masalah prioritas, fokus dan opsi judul).
+- Setelah data Dapodik ada: lanjut Langkah 2 dan 3 (masalah prioritas, fokus dan opsi judul).

@@ -1,4 +1,7 @@
 # RULES PROPOSAL — RFP Tanoto Foundation
+
+> **Aturan penulisan Sanggabiz** (`../ATURAN-PENULISAN.md`) berlaku untuk proposal ini dan semua dokumen lain. Dokumen Tanoto yang sudah ada ditulis sebelum aturan itu dan akan dirapikan saat disentuh berikutnya.
+
 **RFP No. 0648/TF-JKT/VIII/2026 · Mitra Pelaksana Program Pendampingan Teknis LPTK Penyelenggara PPG**
 Sumber: `RFP - Mitra Pelaksana Pendampingan Teknis LPTK Penyelenggara PPG.pdf` (13 hlm) **dan** `20260925 TOR PPG Technical Assistance 2026 - RFP Presentation.pdf` (15 hlm, materi presentasi yang dibagikan Tanoto Foundation di sesi Q&A 25 Sep 2026 — selanjutnya disebut **TOR**). Dokumen ini adalah aturan kerja untuk menyusun proposal Sanggabiz. Kalau RFP dan TOR bertentangan, **RFP yang menang** (dokumen resmi dan lebih rinci); TOR dipakai untuk memahami maksud TF, mengambil kosakata dan kerangka berpikir mereka, dan mengisi detail yang tidak ada di RFP (nama LPTK pembanding, temuan supervisi, Theory of Change, peran Kemdiktisaintek).
 
