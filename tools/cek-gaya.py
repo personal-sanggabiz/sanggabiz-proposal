@@ -30,6 +30,7 @@ FRASA = [
     "bukan sekadar", "tidak hanya", "mari kita", "tentu saja",
     "leverage", "seamless", "robust", "game-changer", "delve", "tapestry",
 ]
+NEGATIF = ["sempit", "kecil", "murah", "mepet", "lemah", "buruk", "minim"]  # hanya untuk .docx (dokumen klien)
 EMOJI = re.compile("[\U0001F300-\U0001FAFF☀-⛿✀-➿]")
 ABAIKAN = {"ATURAN-PENULISAN.md"}
 
@@ -78,6 +79,11 @@ def periksa(path):
         if EMOJI.search(baris):
             print(f"{path}:{no}: emoji: {baris.strip()[:90]}")
             n += 1
+        if path.suffix == ".docx":
+            for w in NEGATIF:
+                if re.search(r"\b" + w + r"\b", rendah):
+                    print(f"{path}:{no}: kata negatif '{w}': {baris.strip()[:90]}")
+                    n += 1
         for f in FRASA:
             if f in rendah:
                 print(f"{path}:{no}: frasa '{f}': {baris.strip()[:90]}")

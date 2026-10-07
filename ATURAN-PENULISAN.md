@@ -48,6 +48,8 @@ Kata ini tidak dilarang mutlak, tetapi biasanya dipakai tanpa makna. Ganti denga
 
 holistik, komprehensif, sinergi, ekosistem (kecuali yang benar-benar ekosistem), transformasi, mengoptimalkan, memberdayakan, menyelami, menggali lebih dalam, lanskap, tonggak, inovatif, terdepan, revolusioner, solusi terbaik, menjembatani kesenjangan, memainkan peran krusial, sangat penting untuk, perlu dicatat bahwa.
 
+Kata bernada negatif atau meremehkan juga dihindari di dokumen untuk klien: sempit, kecil, murah, mepet, lemah, buruk, minim. Gunakan padanan positif yang tetap akurat: ringkas, terfokus, efisien, ekonomis, area pengembangan.
+
 Dari bahasa Inggris: leverage, seamless, robust, game-changer, unlock, delve, tapestry.
 
 Contoh perbaikan:

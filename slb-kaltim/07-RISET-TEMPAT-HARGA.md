@@ -36,3 +36,15 @@ Sumber: [AMI Magazine, daftar hotel Balikpapan](https://www.amimagazine.global/M
 - Disarankan **minta penawaran tertulis** ke Quest, Aston, dan Swiss-Belhotel dengan permintaan yang sama: half day, 80 peserta, kelas/U-shape, coffee break + makan siang, proyektor + sound, **sudah termasuk pajak dan service**.
 - Tanyakan juga **aksesibilitas**: lift atau ramp, toilet difabel, parkir (ada guru difabel).
 - Cek juga opsi gratis/murah: aula Disdik atau kantor pemda, jika klien pemda.
+
+## 4. Data ruang untuk pemilihan tempat (diperbarui 7 Oktober 2026)
+| Hotel | Ruang | Ukuran | Kapasitas | Harga | Catatan |
+|---|---|---|---|---|---|
+| **Quest Hotel Balikpapan** (Jl. Jenderal Sudirman No. 11) | Orchid Room | sekitar 120 m2 | 28 sampai 100 | Rp 148.500 per orang (XWORK) | **Dipilih di proposal v2.** Harga terverifikasi paling rendah untuk ruang yang memuat 80 orang di tengah kota |
+| Swiss-Belhotel Balikpapan (Balikpapan Ocean Square, Jl. Jenderal Sudirman, Klandasan Ilir) | Berau | 8,5 x 12 m (102 m2) | teater 128, kelas 68 | mulai Rp 150.000 net per orang | Cadangan. Kelas 68 kurang dari 80, jadi perlu susunan teater |
+| | Kayan | 7,5 x 11,5 m (86 m2) | teater 108, kelas 58 | | |
+| | Mahakam Grand Ballroom | 27 x 45 m (1.215 m2) | teater 1.519, kelas 810 | | Jauh lebih luas dari kebutuhan, kemungkinan harga lebih tinggi |
+| Novotel Balikpapan (Jl. Brigjen Ery Suparjan No. 2) | Borneo A, B, atau C | 320 m2 per ruang | kelas 160, banquet 150, U 100 | belum ditemukan | Cadangan bila ruang Quest terasa padat. Minta penawaran |
+| Grand Jatra Hotel | Le Grande Ballroom (lantai 10) | 765 m2 | teater 800, kelas 500 | belum ditemukan | Lebih luas dari kebutuhan |
+
+Sumber: AMI Magazine dan Successful Meetings (daftar ruang rapat), XWORK (harga), situs Swiss-Belhotel. Foto ruang tidak dapat diunduh dari lingkungan kerja ini.
