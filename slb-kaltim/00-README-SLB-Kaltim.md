@@ -2,7 +2,7 @@
 
 > Proposal baru, **terpisah dari proposal Tanoto** (`../tanoto/`). Jangan mencampur aturan, aset, atau klaim kedua proyek.
 
-Dibuat: 7 Okt 2026 · Status: **tahap awal, info masih minim**
+Dibuat: 7 Okt 2026 · Status: **Langkah 1 selesai sebagian** (lihat `04-RISET-SLB-Balikpapan.md`), menunggu jawaban Langkah 0
 
 ## 1. Yang sudah diketahui
 | Hal | Isi | Sumber |
@@ -23,9 +23,10 @@ Klien/pemberi dana · jumlah guru/sekolah · range budget · timeline (harus sel
 | `01-LANGKAH-KERJA.md` | Langkah 0–8 mematangkan ide (dari docx) |
 | `02-PERTANYAAN-LANGKAH-0.md` | Pesan siap kirim ke Pak Priyo + asumsi sementara |
 | `03-MODAL-SANGGABIZ.md` | Portofolio/aset Sanggabiz yang bisa dipakai, ditarik dari repo |
+| `04-RISET-SLB-Balikpapan.md` | Hasil riset Langkah 1 (sekolah, kewenangan, regulasi, temuan yang mengubah rencana) |
 | `sumber/` | File asli yang diterima (docx) |
 
-Folder berikutnya (dibuat saat dikerjakan): `04-RISET-SLB-Balikpapan.md` (Langkah 1), lalu opsi judul, paket Hemat/Standar/Ideal, dan draf proposal.
+Berikutnya: data Dapodik lengkap, lalu opsi judul, paket Hemat/Standar/Ideal, dan draf proposal.
 
 ## 4. Format acuan di repo
 - `../reference/Proposal Training UMY.docx` — proposal training berbentuk dokumen
