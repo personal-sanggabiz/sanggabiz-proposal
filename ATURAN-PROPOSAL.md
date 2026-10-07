@@ -65,3 +65,5 @@ Silabus ditulis per sesi dan per topik, cukup rinci supaya semua pembaca memaham
 1. Bagian yang harus diisi tim ditandai `[ISI TIM: ...]` dengan stabilo kuning.
 2. Setiap proposal punya catatan tim: daftar isian, daftar cek klaim, dan hitungan internal anggaran.
 3. Proposal yang direvisi diberi nomor versi pada nama file (misalnya `v2 Proposal ...`).
+4. Versi lama tidak pernah dihapus. Saat membuat v2, v3, dan seterusnya, file versi sebelumnya tetap disimpan di folder yang sama sebagai arsip. Penghapusan hanya atas permintaan tim.
+5. Bila skrip pembuat dokumen diperbarui, simpan salinan skrip versi lama (misalnya `build_proposal_v1.js`) supaya versi lama tetap bisa dibuat ulang.
