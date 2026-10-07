@@ -36,5 +36,28 @@ Dibuat 7 Okt 2026. Sumber: jawaban Muchson + informasi dari teman Muchson + chat
 - Pak Priyo tidak punya daftar guru, jadi **bagian cara mengundang 80 orang harus ada** supaya klien tahu siapa yang bekerja.
 - Pengalaman Sanggabiz di pendidikan luar biasa belum ada (`03`). Keputusan cara menulis klaim masih menunggu Muchson (pertanyaan 17).
 
-## 5. Pertanyaan yang belum dijawab Muchson
-Pertanyaan 4–12 dan 14–17 dari daftar sebelumnya belum dijawab. Yang paling menentukan: ditujukan ke siapa, tanggal, peserta gratis atau bayar, satu harga atau tiga paket, gaya visual, dan cara menulis klaim pengalaman.
+## 5. Jawaban Muchson atas pertanyaan 4–17 (7 Okt 2026, kutipan)
+| # | Topik | Jawaban Muchson |
+|---|---|---|
+| 4 | Ditujukan ke siapa | "iya kosongkan dulu buat general aja" |
+| 5 | Atas nama siapa | "sanggabiz dong" (nama penandatangan dan kontak belum disebut) |
+| 6 | Gabungan SLB/inklusif, jenjang | "gak ada info, kalau buat umum aman gak ya ?" |
+| 7 | Jalur rekrutmen, gratis/bayar | "jalur rekrutment realistis aja" (gratis/bayar belum disebut) |
+| 8 | Jam dan tanggal | "belum buat general aja dulu, belum tentu kan tangglan detailnya" |
+| 9 | Pembicara | "yes local tapi belum ada nama" |
+| 10 | Porsi materi vs praktik | "yes bener setuju" (40% materi, 60% praktik) |
+| 11 | Pre-post test dan tindak lanjut | "setuju" |
+| 12 | Anggaran | "tampilkan di proposal dan standart hemat ya" |
+| 13 | Panjang | "ringkas aja dulu" |
+| 14 | Gaya | "yes setuju" (gaya Sanggabiz, isi formal) |
+| 15 | Acuan UMY | "boleh tapi gak usah lengkap dulu, karena nanti kena refisi buat agak genral dulu tapi sudah jelas materinya apa dan mau ngapain aja" |
+| 16 | Lampiran | "informasi seadanya aja" |
+| 17 | Klaim pengalaman | "setuju" |
+
+Tambahan dari Muchson: "di proposal nanti muat juga foto grafik atau hal lain ya, kenapa memilih topik ini mungkin dasarkan dengan penelitian atau research kita mungkin, kayak kenapa topiknya itu karena guru banyak yang gak paham itu dan di SLB juga gak banyak paham maka materinya itu."
+
+## 6. Yang masih menggantung
+1. Maksud "standart hemat" di pertanyaan 12 (dua paket Standar dan Hemat, atau satu harga)?
+2. Nama dan jabatan penandatangan, kontak (boleh placeholder).
+3. Peserta gratis atau bayar (default: gratis, biaya ditanggung pemberi dana).
+4. Sumber foto dan data grafik. Data lokal Balikpapan yang ada baru angka siswa SLBN (219/96/86). Klaim "banyak guru tidak paham" butuh sumber.
