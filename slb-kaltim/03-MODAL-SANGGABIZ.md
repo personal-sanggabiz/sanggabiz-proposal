@@ -11,7 +11,7 @@ Ditarik dari `../tanoto/00-RULES-Proposal-Tanoto.md` (bagian 8) dan compro `../C
 - **Kampus:** UMY sebagai klien training (proposal ada di `../reference/`). Peluang tiru: kolaborasi kampus lokal untuk mahasiswa asisten lapangan.
 - **Pengembangan modul** (STEM, Leadership for First Time Manager, FYEP) mendukung produk nyata seperti modul PPI.
 - **Data dan dampak:** Digital Training Output (dashboard analitik). Cocok untuk Langkah 6 (dampak terukur).
-- **Kerangka kerja:** Cambridge Framework (Define, Design, Deliver, Discuss).
+- **Pendekatan pelatihan:** tidak memakai kerangka 4D. Gunakan metode umum yang sesuai masalah (lihat `../ATURAN-PROPOSAL.md`).
 - **Skala:** 6.000+ mitra engagement, 400+ proyek, 500+ expert dan trainer.
 
 ## Celah (jangan diklaim)
