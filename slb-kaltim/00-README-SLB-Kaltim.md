@@ -2,27 +2,30 @@
 
 > Proposal baru, **terpisah dari proposal Tanoto** (`../tanoto/`). Jangan mencampur aturan, aset, atau klaim kedua proyek.
 
-Dibuat: 7 Okt 2026 · Status: **Langkah 1 selesai sebagian** (lihat `04-RISET-SLB-Balikpapan.md`), menunggu jawaban Langkah 0
+Dibuat: 7 Okt 2026 · Status: **Info primer dari Pak Priyo sudah masuk** (`05-INFO-PRIMER-PAK-PRIYO.md`). Riset Langkah 1 selesai sebagian
 
 ## 1. Yang sudah diketahui
-| Hal | Isi | Sumber |
-|---|---|---|
-| Topik | Pelatihan guru SLB / sekolah inklusif | Catatan kerja (docx) |
-| Lokasi | Balikpapan, Kalimantan Timur | Catatan kerja |
-| Orang kunci | **Pak Priyo** (narasumber info klien); jaringan **Nauval/Unmul** untuk validasi lapangan | Catatan kerja |
-| Petunjuk klien | Di chat sempat muncul "pertamini" dan "KPC". Belum jelas siapa pemberi dana (kemungkinan CSR Pertamina/kilang Balikpapan, atau KPC) | Catatan kerja |
-| Anggaran | "Asal murah", belum ada angka | Catatan kerja |
-| PIC internal | Muchson kirim pertanyaan Langkah 0; Claude mulai riset Langkah 1 | Catatan kerja |
+Sumber primer: chat Pak Priyo 6 Okt 2026 (`05-INFO-PRIMER-PAK-PRIYO.md`, ada kesimpulan di atas dan chat asli di bawah). Kutipan, bukan tafsiran:
+| Hal | Tertulis di chat |
+|---|---|
+| Acara | Pelatihan guru SLB/inklusif, Balikpapan, "Setengah hari, offline" |
+| Goal | "capacity building pada guru2 SLB/inklusi" |
+| Materi | "Silakan diajukan" |
+| Ruang lingkup | "materi, pembicara, snack, tempat, dan peserta...target 80 orang" · "Cariin peserta" · "G ada aku list gurunya" |
+| Budget | Tanpa angka. "Kalo pake mobilisasi ya jd mahal" · "Ksh aja penawaran" · "asal murah" |
+| Diajukan ke | "Ketok ke pemda sana nanti" (Nauval) |
+| Jaringan | Pak Priyo, Nauval (Unmul) |
 
-## 2. Yang belum diketahui (isi dulu, jangan ditebak)
-Klien/pemberi dana · jumlah guru/sekolah · range budget · timeline (harus selesai TA 2026?) · ekspektasi topik klien. Daftar pertanyaan siap kirim ada di `02-PERTANYAAN-LANGKAH-0.md`.
+## 2. Belum ada di chat
+Nama klien/pemberi dana · tanggal pelaksanaan · angka budget. Makna "pertamini" dan "ketok ke pemda" belum dipastikan.
 
 ## 3. Isi folder
 | File | Fungsi |
 |---|---|
-| `01-LANGKAH-KERJA.md` | Langkah 0–8 mematangkan ide (dari docx) |
+| `01-LANGKAH-KERJA.md` | Langkah 0–8 dari docx. **Dibuat sebelum info Pak Priyo**: durasi 2–3 hari, ToT, dan dugaan CSR sudah tidak berlaku (lihat `05`) |
 | `02-PERTANYAAN-LANGKAH-0.md` | Pesan siap kirim ke Pak Priyo + asumsi sementara |
 | `03-MODAL-SANGGABIZ.md` | Portofolio/aset Sanggabiz yang bisa dipakai, ditarik dari repo |
+| `05-INFO-PRIMER-PAK-PRIYO.md` | **Sumber utama.** Chat Pak Priyo, fakta, tafsiran, dampak ke rencana, komponen biaya |
 | `04-RISET-SLB-Balikpapan.md` | Hasil riset Langkah 1 (sekolah, kewenangan, regulasi, temuan yang mengubah rencana) |
 | `sumber/` | File asli yang diterima (docx) |
 
