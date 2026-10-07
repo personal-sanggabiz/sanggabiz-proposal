@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Kesiapan Akreditasi — 12 LPTK</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-l:#0B396D; --navy-d:#092647; --navy-dd:#0D2A4E; --navy-p:#0B3361;
+    --yellow:#FFC00C; --teal:#2F7E9D; --white:#FFFFFF; --grey:#B0C0CF;
+    --ink:#1D1D1F; --green:#3FB27F; --amber:#FFC00C; --red:#E0555A;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; min-height:100vh; font-family:'Montserrat',sans-serif; color:var(--white);
+    background:linear-gradient(160deg, var(--navy-l) 0%, var(--navy-d) 100%);
+    padding:22px 34px 22px;
+  }
+  .topbar{display:flex; justify-content:space-between; align-items:flex-start; gap:20px; flex-wrap:wrap; margin-bottom:6px;}
+  .brand{display:flex; align-items:center; gap:10px; font-weight:800; font-size:20px; letter-spacing:.3px;}
+  .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--yellow);}
+  h1{font-size:23px; font-weight:800; margin:10px 0 3px;}
+  .sub{color:var(--grey); font-size:12.5px; margin:0 0 3px; max-width:760px; line-height:1.4;}
+  .badge-illustrative{
+    display:inline-flex; align-items:center; gap:8px; background:#3a2a06; border:1.5px solid var(--yellow);
+    color:var(--yellow); font-weight:700; font-size:12px; padding:8px 14px; border-radius:999px; margin-top:10px;
+  }
+  .kicker{text-transform:uppercase; letter-spacing:2px; font-size:11px; font-weight:700; color:var(--yellow); margin:0 0 6px;}
+
+  .stats{display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin:16px 0;}
+  .stat{background:var(--teal); border:2px solid var(--white); border-radius:14px; padding:12px 14px; text-align:center;}
+  .stat .n{font-size:30px; font-weight:800; line-height:1;}
+  .stat .l{font-size:11px; font-weight:700; margin-top:6px; opacity:.95;}
+
+  .panel{background:var(--navy-dd); border:1.5px solid var(--teal); border-radius:16px; padding:15px 20px; margin-bottom:14px;}
+  .panel h2{font-size:16px; font-weight:800; margin:0 0 4px; color:var(--yellow);}
+  .panel .desc{color:var(--grey); font-size:11.5px; margin:0 0 10px;}
+
+  .filters{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px;}
+  .chip{
+    background:var(--navy-p); border:1.5px solid var(--teal); color:var(--white); font-weight:700; font-size:11.5px;
+    padding:7px 14px; border-radius:999px; cursor:pointer; transition:.15s;
+  }
+  .chip:hover{border-color:var(--yellow);}
+  .chip.active{background:var(--yellow); border-color:var(--yellow); color:var(--navy-d);}
+
+  table{width:100%; border-collapse:separate; border-spacing:0 6px; font-size:12px;}
+  thead th{
+    text-align:left; font-size:10.5px; text-transform:uppercase; letter-spacing:.6px; color:var(--grey);
+    font-weight:700; padding:0 10px 6px; position:sticky; top:0;
+  }
+  thead th.center, td.center{text-align:center;}
+  tbody tr{background:var(--navy-p); cursor:default;}
+  tbody tr td:first-child{border-top-left-radius:10px; border-bottom-left-radius:10px;}
+  tbody tr td:last-child{border-top-right-radius:10px; border-bottom-right-radius:10px;}
+  td{padding:11px 10px; vertical-align:middle;}
+  .lptk-name{font-weight:700; font-size:12.5px;}
+  .lptk-prov{font-size:10px; color:var(--grey); font-weight:600;}
+  .score{
+    display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px;
+    font-weight:800; font-size:13px; color:var(--navy-d);
+  }
+  .s1{background:var(--red); color:white;}
+  .s2{background:#E0A23A; color:var(--navy-d);}
+  .s3{background:#8FCB6B; color:var(--navy-d);}
+  .s4{background:var(--green); color:white;}
+  .rtl-pill{
+    display:inline-block; font-size:9.5px; font-weight:800; padding:4px 10px; border-radius:999px; text-transform:uppercase; letter-spacing:.4px;
+  }
+  .rtl-rencana{background:#3a3a3a; color:#ddd;}
+  .rtl-berjalan{background:#5a4a12; color:var(--yellow);}
+  .rtl-selesai{background:#1c4a36; color:#8FCB6B;}
+  .rtl-terbukti{background:#123a2c; color:var(--green); border:1px solid var(--green);}
+
+  .legend{display:flex; gap:18px; flex-wrap:wrap; margin-top:14px; font-size:10.5px; color:var(--grey);}
+  .legend span{display:inline-flex; align-items:center; gap:6px;}
+  .legend i{width:12px; height:12px; border-radius:4px; display:inline-block;}
+
+  .grid2{display:grid; grid-template-columns:1.3fr .9fr; gap:20px;}
+  @media (max-width:1080px){ .grid2{grid-template-columns:1fr;} .stats{grid-template-columns:repeat(2,1fr);} }
+
+  .element-bars{display:flex; flex-direction:column; gap:12px;}
+  .ebar-row{display:grid; grid-template-columns:150px 1fr 40px; align-items:center; gap:10px; font-size:11.5px;}
+  .ebar-track{height:14px; background:var(--navy-p); border-radius:7px; overflow:hidden; display:flex;}
+  .ebar-seg{height:100%;}
+
+  .foot{display:flex; justify-content:space-between; align-items:center; margin-top:6px; color:var(--grey); font-size:10px; flex-wrap:wrap; gap:8px;}
+  .foot b{color:var(--white);}
+</style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div>
+      <div class="brand"><span class="dot"></span>sanggabiz</div>
+    </div>
+    <div class="badge-illustrative">⚠ DATA ILUSTRASI — bukan hasil temuan riil. Diisi ulang saat Laporan Awal.</div>
+  </div>
+
+  <p class="kicker">Prototipe alat kerja · Proposal Tanoto Foundation RFP 0648</p>
+  <h1>Dashboard Kesiapan Akreditasi — 12 LPTK</h1>
+  <p class="sub">Contoh tampilan Readiness Scorecard dan RTL Tracker yang akan kami operasikan sejak Laporan Awal. Skor dan status di bawah ini adalah <b>simulasi</b> untuk menunjukkan cara kerja alat — bukan penilaian terhadap LPTK yang sebenarnya. 12 nama LPTK sesuai RFP bagian C.3.</p>
+
+  <div class="stats" id="stats"></div>
+
+  <div class="grid2">
+    <div class="panel">
+      <h2>Readiness Scorecard — 12 LPTK × 5 Fokus 2026</h2>
+      <p class="desc">Skor 1–4 mengikuti rubrik LAMDIK/BAN-PT, dipetakan ke lima fokus 2026 Tanoto Foundation. Klik klaster untuk memfilter.</p>
+      <div class="filters" id="filters"></div>
+      <div style="max-height:420px; overflow:auto;">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:210px;">LPTK</th>
+            <th class="center">Dosen</th>
+            <th class="center">OBE</th>
+            <th class="center">PPL</th>
+            <th class="center">SPMI</th>
+            <th class="center">Publikasi</th>
+            <th class="center">RTL 2025</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+      </div>
+      <div class="legend">
+        <span><i style="background:var(--red)"></i> 1 — belum memenuhi</span>
+        <span><i style="background:#E0A23A"></i> 2 — sebagian</span>
+        <span><i style="background:#8FCB6B"></i> 3 — memenuhi</span>
+        <span><i style="background:var(--green)"></i> 4 — melampaui</span>
+      </div>
+    </div>
+
+    <div>
+      <div class="panel">
+        <h2>Rata-rata skor per elemen (12 LPTK)</h2>
+        <p class="desc">Distribusi ilustratif — pola umum yang sering ditemui: PPL dan publikasi cenderung lebih lemah dari kualitas dosen.</p>
+        <div class="element-bars" id="ebars"></div>
+      </div>
+      <div class="panel">
+        <h2>Status RTL Supervisi 2025</h2>
+        <p class="desc">Ringkasan status tindak lanjut, 12 LPTK.</p>
+        <div class="element-bars" id="rtlbars"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div>Dibangun Sanggabiz sebagai prototipe kerja untuk proposal RFP No. 0648/TF-JKT/VIII/2026. <b>Bukan bagian dari deck presentasi</b> — dilampirkan sebagai bukti kesiapan alat.</div>
+    <div>v1 · 29 Sep 2026</div>
+  </div>
+
+<script>
+const CLUSTERS = {
+  "Medan": "#2F7E9D", "Pekanbaru": "#2F7E9D", "Jambi": "#2F7E9D",
+  "Semarang–Salatiga–Kudus": "#0D2A4E", "Samarinda": "#0D2A4E"
+};
+const LPTK = [
+  {nama:"Universitas Islam Sumatera Utara", prov:"Sumatera Utara", klaster:"Medan", skor:{dosen:2,obe:2,ppl:3,spmi:2,pub:1}, rtl:"berjalan"},
+  {nama:"Universitas Muhammadiyah Sumatera Utara", prov:"Sumatera Utara", klaster:"Medan", skor:{dosen:3,obe:2,ppl:2,spmi:3,pub:2}, rtl:"berjalan"},
+  {nama:"Universitas HKBP Nommensen", prov:"Sumatera Utara", klaster:"Medan", skor:{dosen:2,obe:3,ppl:2,spmi:2,pub:1}, rtl:"rencana"},
+  {nama:"Universitas Negeri Medan", prov:"Sumatera Utara", klaster:"Medan", skor:{dosen:4,obe:3,ppl:3,spmi:3,pub:3}, rtl:"selesai"},
+  {nama:"Universitas Riau", prov:"Riau", klaster:"Pekanbaru", skor:{dosen:3,obe:3,ppl:2,spmi:3,pub:2}, rtl:"berjalan"},
+  {nama:"Universitas Islam Riau", prov:"Riau", klaster:"Pekanbaru", skor:{dosen:2,obe:2,ppl:2,spmi:2,pub:1}, rtl:"rencana"},
+  {nama:"Universitas Jambi", prov:"Jambi", klaster:"Jambi", skor:{dosen:3,obe:2,ppl:3,spmi:2,pub:2}, rtl:"berjalan"},
+  {nama:"Universitas PGRI Semarang", prov:"Jawa Tengah", klaster:"Semarang–Salatiga–Kudus", skor:{dosen:2,obe:3,ppl:2,spmi:3,pub:2}, rtl:"berjalan"},
+  {nama:"Universitas Kristen Satya Wacana Salatiga", prov:"Jawa Tengah", klaster:"Semarang–Salatiga–Kudus", skor:{dosen:4,obe:3,ppl:4,spmi:3,pub:3}, rtl:"terbukti"},
+  {nama:"Universitas Islam Sultan Agung Semarang", prov:"Jawa Tengah", klaster:"Semarang–Salatiga–Kudus", skor:{dosen:3,obe:2,ppl:2,spmi:2,pub:2}, rtl:"berjalan"},
+  {nama:"Universitas Muria Kudus", prov:"Jawa Tengah", klaster:"Semarang–Salatiga–Kudus", skor:{dosen:2,obe:2,ppl:1,spmi:2,pub:1}, rtl:"rencana"},
+  {nama:"Universitas Mulawarman", prov:"Kalimantan Timur", klaster:"Samarinda", skor:{dosen:3,obe:2,ppl:2,spmi:2,pub:2}, rtl:"berjalan"},
+];
+const RTL_LABEL = {rencana:"Rencana", berjalan:"Berjalan", selesai:"Selesai", terbukti:"Terbukti"};
+const ELEMENTS = [["dosen","Dosen"],["obe","OBE"],["ppl","PPL"],["spmi","SPMI"],["pub","Publikasi"]];
+
+function scoreCell(v){ return `<span class="score s${v}">${v}</span>`; }
+
+function renderStats(rows){
+  const avg = k => (rows.reduce((a,r)=>a+r.skor[k],0)/rows.length).toFixed(1);
+  const terbukti = rows.filter(r=>r.rtl==="terbukti").length;
+  const stats = [
+    [rows.length, "LPTK ditampilkan"],
+    [avg("dosen"), "rata dosen"],
+    [avg("ppl"), "rata PPL"],
+    [avg("pub"), "rata publikasi"],
+    [terbukti+"/"+rows.length, "RTL terbukti"],
+  ];
+  document.getElementById("stats").innerHTML = stats.map(([n,l])=>`<div class="stat"><div class="n">${n}</div><div class="l">${l}</div></div>`).join("");
+}
+
+function renderTable(rows){
+  document.getElementById("tbody").innerHTML = rows.map(r=>`
+    <tr>
+      <td><div class="lptk-name">${r.nama}</div><div class="lptk-prov">${r.prov} · ${r.klaster}</div></td>
+      <td class="center">${scoreCell(r.skor.dosen)}</td>
+      <td class="center">${scoreCell(r.skor.obe)}</td>
+      <td class="center">${scoreCell(r.skor.ppl)}</td>
+      <td class="center">${scoreCell(r.skor.spmi)}</td>
+      <td class="center">${scoreCell(r.skor.pub)}</td>
+      <td class="center"><span class="rtl-pill rtl-${r.rtl}">${RTL_LABEL[r.rtl]}</span></td>
+    </tr>`).join("");
+}
+
+function renderEbars(rows){
+  const colors = {1:"var(--red)",2:"#E0A23A",3:"#8FCB6B",4:"var(--green)"};
+  document.getElementById("ebars").innerHTML = ELEMENTS.map(([k,label])=>{
+    const avg = rows.reduce((a,r)=>a+r.skor[k],0)/rows.length;
+    const pct = (avg/4*100).toFixed(0);
+    const color = avg>=3.5?colors[4]:avg>=2.5?colors[3]:avg>=1.5?colors[2]:colors[1];
+    return `<div class="ebar-row"><span>${label}</span><div class="ebar-track"><div class="ebar-seg" style="width:${pct}%;background:${color}"></div></div><span>${avg.toFixed(1)}</span></div>`;
+  }).join("");
+}
+
+function renderRtlbars(rows){
+  const order = ["rencana","berjalan","selesai","terbukti"];
+  const colors = {rencana:"#5a5a5a", berjalan:"#E0A23A", selesai:"#8FCB6B", terbukti:"#3FB27F"};
+  document.getElementById("rtlbars").innerHTML = order.map(st=>{
+    const n = rows.filter(r=>r.rtl===st).length;
+    const pct = rows.length? (n/rows.length*100).toFixed(0):0;
+    return `<div class="ebar-row"><span>${RTL_LABEL[st]}</span><div class="ebar-track"><div class="ebar-seg" style="width:${pct}%;background:${colors[st]}"></div></div><span>${n}</span></div>`;
+  }).join("");
+}
+
+function renderFilters(){
+  const klasters = ["Semua", ...new Set(LPTK.map(r=>r.klaster))];
+  document.getElementById("filters").innerHTML = klasters.map((k,i)=>
+    `<button class="chip ${i===0?'active':''}" data-k="${k}">${k}</button>`).join("");
+  document.querySelectorAll(".chip").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      document.querySelectorAll(".chip").forEach(b=>b.classList.remove("active"));
+      btn.classList.add("active");
+      const k = btn.dataset.k;
+      const rows = k==="Semua" ? LPTK : LPTK.filter(r=>r.klaster===k);
+      renderAll(rows);
+    });
+  });
+}
+
+function renderAll(rows){
+  renderStats(rows); renderTable(rows); renderEbars(rows); renderRtlbars(rows);
+}
+
+renderFilters();
+renderAll(LPTK);
+</script>
+</body>
+</html>

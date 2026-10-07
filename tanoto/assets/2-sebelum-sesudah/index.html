@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Sebelum vs Sesudah — Evidence Register</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-l:#0B396D; --navy-d:#092647; --navy-dd:#0D2A4E; --navy-p:#0B3361;
+    --yellow:#FFC00C; --teal:#2F7E9D; --white:#FFFFFF; --grey:#B0C0CF;
+    --red:#E0555A; --red-d:#3a1f22; --green:#3FB27F;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0; padding:0;}
+  body{
+    width:1600px; height:900px; overflow:hidden; position:relative;
+    font-family:'Montserrat',sans-serif; color:var(--white);
+    background:linear-gradient(160deg, var(--navy-l) 0%, var(--navy-d) 100%);
+    padding:34px 40px;
+  }
+  .kicker{text-transform:uppercase; letter-spacing:2px; font-size:11px; font-weight:700; color:var(--yellow); margin:0 0 6px;}
+  h1{font-size:31px; font-weight:800; margin:0 0 32px; max-width:1250px; line-height:1.28;}
+
+  .cols{display:grid; grid-template-columns:1fr 90px 1fr; gap:0; align-items:stretch;}
+  .col{border-radius:22px; padding:28px 36px; border:2px solid; display:flex; flex-direction:column;}
+  .col.before{background:#17181c; border-color:#4a3336;}
+  .col.after{background:var(--navy-dd); border-color:var(--teal);}
+  .col-head{display:flex; align-items:center; gap:14px; margin-bottom:20px;}
+  .tag{font-size:14px; font-weight:800; letter-spacing:1px; padding:9px 18px; border-radius:999px;}
+  .tag.before{background:var(--red-d); color:#ff9a9e; border:1.5px solid var(--red);}
+  .tag.after{background:#123a2c; color:#8fe0bd; border:1.5px solid var(--green);}
+  .col-head h2{font-size:19px; font-weight:800; margin:0;}
+
+  .row{display:flex; gap:16px; align-items:flex-start; padding:15px 0; border-top:1px solid rgba(255,255,255,.08);}
+  .row:first-of-type{border-top:none;}
+  .row .ic{width:30px; height:30px; flex:none; border-radius:8px; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:14px; margin-top:1px;}
+  .before .row .ic{background:var(--red-d); color:#ff9a9e; border:1px solid var(--red);}
+  .after .row .ic{background:#123a2c; color:#8fe0bd; border:1px solid var(--green);}
+  .row p{margin:0; font-size:15.5px; line-height:1.45;}
+  .before .row p{color:#d8c9cb;}
+  .after .row p{color:var(--white);}
+
+  .mid{display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px;}
+  .arrow{width:68px; height:68px; border-radius:50%; background:var(--yellow); color:var(--navy-d); display:flex; align-items:center; justify-content:center; font-size:32px; font-weight:800;}
+  .mid-label{writing-mode:vertical-rl; text-orientation:mixed; font-size:13px; font-weight:700; color:var(--grey); letter-spacing:.5px;}
+
+  .toolband{margin-top:22px; background:var(--navy-p); border:1.5px solid var(--yellow); border-radius:16px; padding:18px 30px; display:flex; align-items:center; gap:24px;}
+  .toolband .lab{font-size:14px; font-weight:800; color:var(--yellow); text-transform:uppercase; letter-spacing:1px; flex:none;}
+  .toolband .chips{display:flex; gap:10px; flex-wrap:wrap;}
+  .chip{background:var(--navy-dd); border:1px solid var(--teal); border-radius:999px; padding:11px 20px; font-size:14px; font-weight:700;}
+
+  .foot{position:absolute; left:40px; right:40px; bottom:16px; display:flex; justify-content:space-between; align-items:center; color:var(--grey); font-size:10px;}
+  .brand{display:flex; align-items:center; gap:8px; font-weight:800; font-size:14px;}
+  .brand .dot{width:8px;height:8px;border-radius:50%;background:var(--yellow);}
+</style>
+</head>
+<body>
+  <p class="kicker">Ilustrasi cara kerja · Evidence Register &amp; Gap-to-Action Tracker</p>
+  <h1>Dari bukti akreditasi yang berserakan, menjadi status yang bisa ditelusuri satu per satu</h1>
+
+  <div class="cols">
+    <div class="col before">
+      <div class="col-head"><span class="tag before">SEBELUM</span><h2>Pola umum di banyak LPTK</h2></div>
+      <div class="row"><div class="ic">✕</div><p>Bukti tersebar di email, WhatsApp grup, dan folder pribadi dosen — tidak ada satu sumber tunggal.</p></div>
+      <div class="row"><div class="ic">✕</div><p>Tidak jelas dokumen mana yang final, mana yang masih draf, mana yang sudah kedaluwarsa.</p></div>
+      <div class="row"><div class="ic">✕</div><p>Rencana tindak lanjut (RTL) hanya tercatat di notulen rapat — progresnya sulit dilacak.</p></div>
+      <div class="row"><div class="ic">✕</div><p>Setiap kunjungan pendampingan mulai lagi dari nol: mencari ulang dokumen yang sama.</p></div>
+      <div class="row"><div class="ic">✕</div><p>Pimpinan sulit membandingkan kemajuan satu LPTK dengan LPTK lain secara sekilas.</p></div>
+    </div>
+
+    <div class="mid">
+      <div class="arrow">→</div>
+      <div class="mid-label">EVIDENCE REGISTER</div>
+    </div>
+
+    <div class="col after">
+      <div class="col-head"><span class="tag after">SESUDAH</span><h2>Dengan alat kerja Sanggabiz</h2></div>
+      <div class="row"><div class="ic">✓</div><p>Satu repositori terpusat per LPTK, tiap bukti punya ID dan tertaut langsung ke elemen akreditasi terkait.</p></div>
+      <div class="row"><div class="ic">✓</div><p>Status jelas untuk setiap bukti: <b>Terverifikasi · Diklaim · Belum ada</b> — tidak ada ruang abu-abu.</p></div>
+      <div class="row"><div class="ic">✓</div><p>Gap-to-Action Tracker: setiap RTL punya penanggung jawab, tenggat, dan status real-time.</p></div>
+      <div class="row"><div class="ic">✓</div><p>Kunjungan berikutnya tinggal melanjutkan dari status terakhir — bukan mengulang dari awal.</p></div>
+      <div class="row"><div class="ic">✓</div><p>Dashboard lintas LPTK menampilkan kemajuan 12 LPTK dalam satu tampilan yang sama.</p></div>
+    </div>
+  </div>
+
+  <div class="toolband">
+    <span class="lab">Alat yang kami operasikan</span>
+    <div class="chips">
+      <span class="chip">Evidence Register</span>
+      <span class="chip">Gap-to-Action Tracker</span>
+      <span class="chip">Readiness Scorecard</span>
+      <span class="chip">Dashboard Kesiapan Akreditasi</span>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div class="brand"><span class="dot"></span>sanggabiz</div>
+    <div>Ilustrasi konsep — bukan cerminan kondisi LPTK tertentu. Dilampirkan sebagai bukti kesiapan metode, bukan bagian dari deck presentasi.</div>
+  </div>
+</body>
+</html>
