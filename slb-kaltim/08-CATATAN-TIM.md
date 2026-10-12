@@ -1,10 +1,37 @@
 # CATATAN TIM: Memakai Proposal Siap Pakai
 
-File yang dipakai: `proposal/v2 Proposal Workshop Pembelajaran Berdiferensiasi - SLB dan Inklusif Balikpapan.docx` (portrait A4, 19 halaman termasuk sampul, surat pengantar, dan lampiran).
+**Versi terbaru: v3.** File: `proposal/v3 Proposal Workshop Pembelajaran Berdiferensiasi - SLB dan Inklusif Balikpapan.docx` (portrait A4, 19 halaman). File v2 tetap disimpan di folder yang sama. Bagian "Arsip v2" di bawah hanya untuk riwayat, kecuali bagian 4 dan seterusnya.
 
 Isi catatan ini hanya untuk tim. Hitungan internal anggaran ada di bagian 4 dan tidak muncul di dokumen klien.
 
-## 1. Isian untuk tim (stabilo kuning di dokumen)
+## v3. Isian untuk tim (stabilo kuning di dokumen)
+Cari semuanya dengan Ctrl+F kata `ISI TIM`.
+| Bagian | Isian |
+|---|---|
+| Surat pengantar | Nomor surat, nama dan jabatan penerima, instansi penerima, tanda tangan, nama dan jabatan penandatangan, kontak |
+| Bab 2.1 | Nama tempat dan alamat, nama ruang dan luas, pihak penyedia tempat, lift atau jalur kursi roda dan toilet |
+| Bab 2.2 | Tanggal pelaksanaan |
+| Bab 6 | Data lengkap pemateri (nama, gelar, jabatan, keahlian, pendidikan, pengalaman, foto) |
+| Bab 7 | Kontak penghubung |
+
+## v3. Yang berubah dari v2
+1. Anggaran bab 5.2 mengikuti sheet final: 3 komponen tenaga (project manager, pemateri, MC dan moderator), modul, perlengkapan, snack dan makan siang untuk 85 orang, sewa mobil, advokasi 10 sekolah, monitoring. Total sesuai sheet Rp 37.505.150 (total + PPh, biaya manajemen 10 persen tertulis tetapi tidak ikut dijumlahkan).
+2. Hotel Quest dan Orchid Room dihapus. Tempat disediakan pihak penyedia tanpa biaya sewa dan ditandai untuk diisi tim.
+3. Tidak ada lagi pendamping kelompok, IO, dan fotografer. Project manager dan MC mengisi peran pendamping. Ketua kelompok membacakan langkah template dan menjaga waktu.
+4. Registrasi, absensi, dan pre-test lewat satu formulir daring. Peserta mengirim foto draf ke grup tindak lanjut sebagai bahan penilaian tim. Modul ringkas dan e-sertifikat dikirim digital.
+5. Perekrutan lewat kunjungan petugas advokasi ke 10 sekolah, lalu konfirmasi project manager H-7 dan H-3.
+6. AI ditambahkan sebagai alat bantu, bukan bahan utama. Guru menyusun draf kasar sendiri, lalu AI merapikannya menjadi versi yang lebih enak dibaca. Disebut di surat pengantar, bab 1.2, 1.3, 1.5, 3.1, 3.2, Topik 4.2, Topik 5.1, 3.4, 3.5, Lampiran A dan B. Panduan memakai AI masuk ke modul ringkas. Data pribadi murid tidak dimasukkan ke AI.
+7. Inti materi, lima sesi, dua belas topik, dan jam rundown tidak berubah dari revisi bagian 3 dan 4.
+
+## v3. Yang perlu diputuskan atau dicek tim
+1. **Biaya manajemen:** di sheet, total akhir tidak menjumlahkan fee 10 persen (Rp 3.730.000). Bila fee ikut dihitung, total menjadi Rp 41.235.150 (Rp 37.300.000 + fee 3.730.000 + PPh 205.150). PPh di sheet sudah dihitung 0,5 persen dari Rp 41.030.000, jadi sudah memuat fee.
+2. **Belum ada dana untuk:** sewa tempat, dokumentasi, pendamping kelompok, IO, rekrutmen di luar advokasi, dan tindak lanjut di luar D.1. Pastikan tempat benar-benar gratis.
+3. **Staf hanya tiga orang** untuk 80 peserta. Cek apakah cukup, terutama saat registrasi dan Sesi 3.
+4. **Anggapan 8 guru per sekolah** dari 10 sekolah. Cek dengan sekolah yang dikunjungi.
+5. Pemateri berbasis Balikpapan atau Kaltim. Pemateri dari Samarinda dapat menambah risiko mobilisasi.
+6. Panduan memakai AI di modul ringkas perlu disiapkan bersama pemateri (contoh perintah, cara memeriksa hasil).
+
+## Arsip v2. Isian untuk tim
 Semua bagian ini ditandai `[ISI TIM: ...]`. Tidak ada bagian lain yang kosong. Cari semuanya dengan Ctrl+F kata `ISI TIM`.
 | Bagian | Isian |
 |---|---|
@@ -14,7 +41,7 @@ Semua bagian ini ditandai `[ISI TIM: ...]`. Tidak ada bagian lain yang kosong. C
 | Bab 6 | Data lengkap pemateri (nama, gelar, jabatan, keahlian, pendidikan, pengalaman, foto) |
 | Bab 7 | Kontak penghubung |
 
-## 2. Yang berubah di v2
+## Arsip v2. Yang berubah di v2
 1. Kerangka kerja diganti total: ADDIE untuk alur, andragogi untuk cara belajar, taksonomi Bloom revisi untuk tujuan, Kirkpatrick untuk evaluasi. Kerangka 4D tidak dipakai lagi (aturan umum, lihat `../ATURAN-PROPOSAL.md`).
 2. Silabus dirinci per sesi dan per topik: tujuan, outline materi, aktivitas per menit, output, ukuran keberhasilan. Hasil yang dibawa pulang (bab 3.4) menunjuk topik asalnya.
 3. Tempat dibuat spesifik: Quest Hotel Balikpapan, Orchid Room, dengan alamat, luas ruang, kapasitas, harga acuan, dan skema susunan 80 peserta.
@@ -22,7 +49,7 @@ Semua bagian ini ditandai `[ISI TIM: ...]`. Tidak ada bagian lain yang kosong. C
 5. Keterangan gambar di tengah, huruf tegak, ukuran sedikit lebih kecil dari teks isi.
 6. Bahasa dirapikan agar formal dan positif.
 
-## 3. Yang perlu dicek sebelum dikirim
+## Arsip v2. Yang perlu dicek sebelum dikirim
 Angka dan klaim di bawah berasal dari ringkasan hasil pencarian web. Sebagian belum dibuka di sumber aslinya karena akses jaringan terbatas. Buka tautan di Lampiran C dan cocokkan.
 1. 40.164 satuan pendidikan dengan peserta didik berkebutuhan khusus, 5.956 (14,83 persen) punya guru pembimbing khusus, per Desember 2023 (rujukan 1).
 2. SLB Negeri Balikpapan: berdiri 1984, 401 siswa (219 SD, 96 SMP, 86 SMA). Tahun berita belum dipastikan (rujukan 8).
