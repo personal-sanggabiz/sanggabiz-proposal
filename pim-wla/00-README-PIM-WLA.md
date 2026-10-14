@@ -10,7 +10,9 @@ Dibuat: 14 Oktober 2026.
 | Berkas | Fungsi |
 |---|---|
 | `proposal/v2 Proposal ABK Fungsi Umum dan Pelatihan - PT Pupuk Iskandar Muda.docx` | Proposal siap pakai (A4, 29 halaman) |
+| `proposal/v3 Proposal Analisis Beban Kerja Fungsi Umum dan RACI Enterprise - PT Pupuk Iskandar Muda.docx` | Dasar upgrade berikutnya: format dan isi sama dengan v1 (29 halaman), hanya nama dan logo Levner diganti Sanggabiz. Dibuat dengan `_build/rebrand_v1_ke_sanggabiz.py` |
 | `08-CATATAN-TIM.md` | Mulai dari sini: perubahan dari v1, keputusan yang perlu dikonfirmasi, isian tim, daftar cek klaim |
 | `sumber/v1 ...docx` | Dokumen asli yang diterima (atas nama Levner), disimpan sebagai arsip v1 |
-| `preview/` | PDF dan gambar tiap halaman, bisa dilihat langsung di GitHub |
+| `preview/` | PDF dan gambar tiap halaman v2 |
+| `preview-v3/` | PDF pratinjau v3. Render LibreOffice menumpuk teks sampul pada gambar, di Word tampil normal |
 | `_build/build_proposal.js` | Skrip pembuat v2. `NODE_PATH=$(npm root -g) node build_proposal.js` |
