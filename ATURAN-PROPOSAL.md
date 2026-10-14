@@ -73,6 +73,8 @@ Silabus ditulis per sesi dan per topik, cukup rinci supaya semua pembaca memaham
 
 6. Bila dokumen harus mengikuti desain dokumen yang sudah ada (misalnya berkas dari klien atau rekan), ubah salinannya lewat skrip dan jangan membuatnya ulang dari nol, supaya font, warna, dan tata letak tetap sama. Simpan skripnya di `_build/`.
 
+7. Varian proposal (misalnya durasi pelatihan yang berbeda) dibuat sebagai dokumen terpisah dengan nomor versi sendiri, bukan sebagai opsi di dalam satu dokumen klien. Semua penyebutan durasi, jam pelajaran, dan hari diperiksa di seluruh dokumen, bukan hanya di bagian kurikulum. Perbandingan antarvarian ditulis di catatan tim.
+
 ## 9. Isi dokumen klien
 1. Dokumen klien tidak memuat catatan internal, kata internal, atau jejak proses kerja. Contohnya: menyebut aturan atau format standar Sanggabiz, jumlah kolom tabel sebagai "standar kami", nomor bagian proposal lain yang akan "diganti", status draf atau nomor versi di dalam isi, nama berkas, keputusan atau keraguan tim, status verifikasi sumber, dan hitungan internal.
 2. Hal-hal itu ditulis di catatan tim pada folder proyek, tidak di dokumen yang dikirim.

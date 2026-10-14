@@ -62,3 +62,29 @@ Catatan penting soal rujukan:
 2. Temuan yang tidak dimuat di dokumen klien karena belum terverifikasi: ringkasan satu jurnal 2025 menyebut kelonggaran 30 persen pada Permen PANRB 1/2020 dan Peraturan BKN 9/2022, serta 25 persen pada Permendagri 12/2008. Penjelasan Kementerian PANRB menyebut beban minimal 1.250 jam per tahun per jabatan. Keduanya perlu dicek ke lampiran resmi sebelum dipakai untuk menetapkan jam kerja efektif PIM.
 3. Pola "70-20-10" dan "piramida belajar" tidak dipakai karena bukti kuatnya lemah menurut hasil pencarian. Porsi 25/54/21 adalah rancangan kami, bukan angka dari penelitian.
 4. Cara membuat ulang dokumen: `NODE_PATH=$(npm root -g) node _build/build_kurikulum.js`. Data modul ada di konstanta `HARI` di skrip itu.
+
+## 5. Varian dua hari (proposal v5)
+Berkas: `proposal/v5 Proposal ... Pelatihan 2 Hari - PT Pupuk Iskandar Muda.docx` (31 halaman, desain sama dengan v3 dan v4). Skrip: `_build/susun_proposal_v5_2hari.py`. v4 tetap sebagai varian tiga hari. Per `ATURAN-PROPOSAL.md` bagian 4 dan 8, klien menerima satu varian saja, jadi pilih salah satu sebelum dikirim.
+
+**Rancangan.** 16 JPL (12 jam efektif), delapan modul 90 menit, empat modul per hari, 30 peserta, dua fasilitator, jalur kasus yang sama. Pemadatan dari rancangan 12 modul:
+| Modul dua hari | Berasal dari modul tiga hari |
+|---|---|
+| 1 Gambaran ABK dan menghitung FTE | 1 dan 3 |
+| 2 Daftar pekerjaan dan rencana pengumpulan data | 2 dan 4 |
+| 3 Teknik dan praktik wawancara | 5 dan 6 |
+| 4 Mengisi lembar kerja dan mencocokkan data | 7 |
+| 5 Memeriksa mutu data | 8 |
+| 6 Hitung ulang FTE, heatmap, dan akar masalah | 9 dan 10 (tanpa panel manajer) |
+| 7 Tindak lanjut, uji RACI, dan panel manajer | 11 dan panel dari 10 |
+| 8 Rencana 30-60-90 dan penutupan | 12 |
+
+Porsi rancangan 23 persen penjelasan, 57 persen praktik, 20 persen review, dihitung skrip dari bobot waktu per langkah (jumlah 720 menit). Bagian 7.3 di dokumen masih menulis sekitar 25/55/20. Selisihnya ringan dan tidak diubah.
+
+**Penyebutan durasi yang diganti di dokumen (12 tempat):** rekomendasi di ringkasan eksekutif, kalimat pembuka dan tabel 7.3, judul 7.4, level 1 dan rangkaian evaluasi di 7.5, kalimat penyesuaian luaran, jadwal pelaksanaan, komponen jasa pelatihan, ketentuan biaya, dan catatan praktik pengumpulan data. Tidak ada sisa "tiga hari", "3 hari", "24 JPL", atau "Hari 3" di dokumen.
+
+**Perlu diputuskan tim**
+1. **Harga.** Komponen pelatihan tetap Rp40.000.000, karena hitungan internalnya belum ada dan saya tidak mengarang potongan. Dua hari mengurangi honor dan perjalanan fasilitator, tetapi biaya persiapan kasus, kartu peran, dan lembar uji tetap sama. Tim menentukan angka akhir.
+2. **Bagian yang dipadatkan.** Praktik wawancara tinggal tiga putaran singkat, dan modul 6 serta 7 paling padat. Bila fasilitator merasa kurang, tambahkan klinik daring pada hari ke-14 selain hari ke-30.
+3. **Target Kirkpatrick.** Post-test minimal 75 dan peningkatan 20 persen tidak diubah. Dengan waktu lebih singkat, target level 2 sedikit lebih berat. Bagian 7.5 belum dipelajari ulang untuk dua hari selain nomor hari.
+4. **Alasan menyarankan dua hari.** Peserta lebih mudah dilepas dari pekerjaan, biaya perjalanan fasilitator lebih rendah, dan keterampilan inti tetap tercakup. Kekurangannya: pendalaman pindah ke klinik D+30.
+5. **Bagian 7.3 dan 7.6** tidak diubah selain angka durasi. Istilah Inggris di 7.3 (hidden work, annualisasi) masih ada.

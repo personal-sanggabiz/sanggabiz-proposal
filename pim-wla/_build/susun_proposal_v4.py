@@ -187,10 +187,15 @@ def normal_para(text):
     return f"<w:p><w:pPr>{ppr}</w:pPr>{r}</w:p>"
 
 
-def sub_heading(text):
+PB_HARI_PERTAMA = False  # True: judul hari pertama pindah ke halaman baru bersama tabelnya
+
+
+def sub_heading(text, pb=False):
     rpr = ARIAL + '<w:color w:val="0c7788"/><w:sz w:val="24"/><w:szCs w:val="24"/>'
     ppr = f'<w:pStyle w:val="heading2"/><w:keepNext w:val="1"/><w:keepLines w:val="0"/><w:spacing w:after="100" w:before="160" w:lineRule="auto"/><w:rPr>{rpr}</w:rPr>'
-    return f'<w:p><w:pPr>{ppr}</w:pPr><w:r><w:rPr>{rpr}<w:rtl w:val="0"/></w:rPr><w:t xml:space="preserve">{escape(text)}</w:t></w:r></w:p>'
+    # pemisah halaman eksplisit (bukan pageBreakBefore) karena dikenali semua program pembaca docx
+    br = f'<w:r><w:rPr>{rpr}</w:rPr><w:br w:type="page"/></w:r>' if pb else ""
+    return f'<w:p><w:pPr>{ppr}</w:pPr>{br}<w:r><w:rPr>{rpr}<w:rtl w:val="0"/></w:rPr><w:t xml:space="preserve">{escape(text)}</w:t></w:r></w:p>'
 
 
 def build(src, dst):
@@ -200,8 +205,8 @@ def build(src, dst):
     t0 = x.index("<w:tbl>", i)
     t1 = x.index("</w:tbl>", t0) + len("</w:tbl>")
     isi = "".join(normal_para(t) for t in INTRO)
-    for judul, modul in HARI:
-        isi += sub_heading(judul) + table(modul)
+    for n, (judul, modul) in enumerate(HARI):
+        isi += sub_heading(judul, pb=(n == 0 and PB_HARI_PERTAMA)) + table(modul)
     x2 = x[:t0] + isi + x[t1:]
     with zipfile.ZipFile(dst, "w", zipfile.ZIP_DEFLATED) as zout:
         for it in zin.infolist():
