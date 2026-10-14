@@ -57,6 +57,7 @@ Silabus ditulis per sesi dan per topik, cukup rinci supaya semua pembaca memaham
 1. Formal dan positif. Hindari kata bernada negatif atau meremehkan untuk menyebut program, tempat, atau peserta: sempit, kecil, murah, mepet, lemah, buruk, minim.
 2. Gantinya: ringkas, terfokus, efisien, ekonomis, area pengembangan, kebutuhan penguatan.
 3. Uraian masalah tetap memakai data dan ditulis faktual, tanpa menilai pihak mana pun.
+4. Dokumen klien ditulis agar dapat dibaca orang awam dan pihak lain yang ikut membacanya. Singkatan dan istilah teknis dijelaskan sekali di daftar istilah di awal, isi tabel memakai kata sehari-hari, dan istilah asing hanya dipakai bila dipakai klien atau tidak punya padanan lazim.
 
 ## 7. Gambar dan keterangan gambar
 1. Keterangan gambar diletakkan di tengah di bawah gambar, huruf tegak (tidak miring), ukuran sedikit lebih kecil dari teks isi.
@@ -69,3 +70,9 @@ Silabus ditulis per sesi dan per topik, cukup rinci supaya semua pembaca memaham
 3. Proposal yang direvisi diberi nomor versi pada nama file (misalnya `v2 Proposal ...`).
 4. Versi lama tidak pernah dihapus. Saat membuat v2, v3, dan seterusnya, file versi sebelumnya tetap disimpan di folder yang sama sebagai arsip. Penghapusan hanya atas permintaan tim.
 5. Bila skrip pembuat dokumen diperbarui, simpan salinan skrip versi lama (misalnya `build_proposal_v1.js`) supaya versi lama tetap bisa dibuat ulang.
+
+## 9. Isi dokumen klien
+1. Dokumen klien tidak memuat catatan internal, kata internal, atau jejak proses kerja. Contohnya: menyebut aturan atau format standar Sanggabiz, jumlah kolom tabel sebagai "standar kami", nomor bagian proposal lain yang akan "diganti", status draf atau nomor versi di dalam isi, nama berkas, keputusan atau keraguan tim, status verifikasi sumber, dan hitungan internal.
+2. Hal-hal itu ditulis di catatan tim pada folder proyek, tidak di dokumen yang dikirim.
+3. Lampiran proposal tidak diberi sampul sendiri bila halaman pertamanya sudah memuat judul, penyusun, penerima, dan bulan.
+4. Pemeriksaan sebelum kirim: baca dokumen sebagai pihak luar yang tidak mengenal Sanggabiz. Hapus kalimat yang hanya masuk akal bagi tim. Cari kata "standar Sanggabiz", "draf", "pengganti", "versi", dan "ISI TIM" di hasil akhir. Tanda `[ISI TIM: ...]` hanya boleh ada bila memang menunggu isian tim, dan harus beres sebelum dokumen dikirim.

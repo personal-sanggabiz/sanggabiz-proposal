@@ -11,7 +11,7 @@ Dibuat: 14 Oktober 2026.
 |---|---|
 | `proposal/v2 Proposal ABK Fungsi Umum dan Pelatihan - PT Pupuk Iskandar Muda.docx` | Proposal siap pakai (A4, 29 halaman) |
 | `proposal/v3 Proposal Analisis Beban Kerja Fungsi Umum dan RACI Enterprise - PT Pupuk Iskandar Muda.docx` | Dasar upgrade berikutnya: format dan isi sama dengan v1 (29 halaman), hanya nama dan logo Levner diganti Sanggabiz. Dibuat dengan `_build/rebrand_v1_ke_sanggabiz.py` |
-| `kurikulum/v2 Kurikulum Pelatihan Tiga Hari ABK - PT Pupuk Iskandar Muda.docx` dan `.pdf` | Usulan pengganti bagian 7.4 pada v3 (12 modul, 24 JPL, satu kasus berjalan, format standar tipe 1 enam kolom tanpa menit per langkah). Dibuat dengan `_build/build_kurikulum.js`. `kurikulum/v1` disimpan sebagai arsip (`_build/build_kurikulum_v1.js`) |
+| `kurikulum/v3 Kurikulum Pelatihan Tiga Hari ABK - PT Pupuk Iskandar Muda.docx` dan `.pdf` | Lampiran siap kirim yang menggantikan bagian 7.4 pada v3: 12 modul, 24 JPL, satu kasus berjalan, tabel enam kolom tanpa menit per langkah, bahasa awam, tanpa sampul. v1 dan v2 disimpan sebagai arsip, skripnya `_build/build_kurikulum_v1.js` dan `_build/build_kurikulum_v2.js`. Skrip terbaru `_build/build_kurikulum.js` |
 | `09-CATATAN-KURIKULUM.md` | Catatan tim untuk kurikulum: perubahan dari v3, keputusan yang perlu dikonfirmasi, status verifikasi rujukan |
 | `08-CATATAN-TIM.md` | Mulai dari sini: perubahan dari v1, keputusan yang perlu dikonfirmasi, isian tim, daftar cek klaim |
 | `sumber/v1 ...docx` | Dokumen asli yang diterima (atas nama Levner), disimpan sebagai arsip v1 |
