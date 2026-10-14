@@ -1,5 +1,5 @@
-// Membuat dokumen kurikulum pelatihan tiga hari (pengganti bagian 7.4 proposal v3).
-// Jalankan: NODE_PATH=$(npm root -g) node build_kurikulum.js
+// Membuat dokumen kurikulum pelatihan tiga hari v2 (pengganti bagian 7.4 proposal v3). Tabel enam kolom, tanpa menit per langkah.
+// Jalankan: NODE_PATH=$(npm root -g) node build_kurikulum.js. Versi 1 dibuat oleh build_kurikulum_v1.js
 const fs = require("fs");
 const path = require("path");
 const {
@@ -48,7 +48,7 @@ function cell(content, width, o = {}) {
     verticalAlign: o.valign || VerticalAlign.TOP,
     margins: { top: 70, bottom: 70, left: 100, right: 100 },
     children: lines.map((t) => new Paragraph({
-      alignment: o.align || AlignmentType.LEFT, spacing: { after: 40, line: 260 },
+      alignment: o.align || AlignmentType.LEFT, spacing: { after: o.gap ?? 40, line: o.lineH ?? 260 },
       children: runs(t, { size: o.size || 17, bold: o.bold, color: o.color || INK }),
     })),
   });
@@ -64,8 +64,8 @@ function table(widths, header, rows, o = {}) {
     return new TableRow({
       cantSplit: !o.split,
       children: r.map((c, i) => cell(c, widths[i], {
-        fill: o.firstBold && i === 0 ? LIGHT : (ri % 2 ? "F7F9FC" : undefined),
-        align: o.align && o.align[i], size: o.size, bold: o.firstBold && i === 0,
+        fill: (o.firstBold || o.firstFill) && i === 0 ? LIGHT : (ri % 2 ? "F7F9FC" : undefined),
+        align: o.align && o.align[i], size: o.size, bold: o.firstBold && i === 0, gap: o.gap, lineH: o.lineH,
       })),
     });
   });
@@ -81,7 +81,7 @@ const HARI = [
       tujuan: "menjelaskan enam langkah ABK dan membedakan beban kerja, kinerja, dan jumlah pegawai.",
       outline: ["Hasil akhir ABK: lembar FTE satu posisi yang sudah jadi", "Enam langkah ABK: inventaris aktivitas, pengumpulan data, uji mutu, hitung FTE, membaca hasil, tindak lanjut", "Beban kerja, kinerja, dan jumlah pegawai adalah tiga hal yang berbeda", "Ringkasan temuan studi PIM sebelumnya dari PIM"],
       akt: [
-        [0, 15, "P", "Peserta menerima deskripsi satu posisi fungsi Umum berisi 8 aktivitas lengkap dengan volume tahunan. Dalam 3 menit dan tanpa alat hitung, tiap peserta menulis perkiraan FTE posisi itu pada kartu, lalu menempelkannya di garis angka flipchart (0,5 sampai 2,0)."],
+        [0, 15, "P", "Peserta menerima deskripsi satu posisi fungsi Umum berisi 8 aktivitas lengkap dengan volume tahunan. Tanpa alat hitung dan dalam waktu singkat, tiap peserta menulis perkiraan FTE posisi itu pada kartu, lalu menempelkannya di garis angka flipchart (0,5 sampai 2,0)."],
         [15, 50, "K", "Fasilitator menunjukkan sebaran kartu, lalu membuka lembar FTE yang sudah jadi untuk posisi yang sama. Fasilitator membongkar lembar itu dari belakang menjadi enam langkah ABK dan menjelaskan tiga istilah dengan satu contoh tiap istilah."],
         [50, 80, "P", "Lima kelompok (masing-masing 6 orang) menerima paket kasus tiga posisi. Tiap kelompok menulis sedikitnya lima isu beban kerja pada kartu dan menandai langkah ABK yang akan menjawab tiap isu."],
         [80, 90, "R", "Tiap kelompok menyebut satu isu. Peserta mengerjakan kuis tiga butir tentang tiga istilah, lalu fasilitator membagikan ringkasan hasil pre-test."],
@@ -142,7 +142,7 @@ const HARI = [
       outline: ["Peran pewawancara, narasumber, dan pengamat", "Mencatat angka dan bukti serta memisahkan fakta dari dugaan", "Pertanyaan lanjutan yang netral", "Menanyakan kejadian terakhir, bukan rata-rata, untuk memperkirakan waktu", "Memberi umpan balik dengan rubrik"],
       akt: [
         [0, 15, "K", "Fasilitator menjelaskan skenario, cara memakai kartu peran, dan rubrik. Narasumber memegang tiga fakta tersembunyi yang hanya dijawab bila ditanya dengan tepat."],
-        [15, 75, "P", "Peserta membentuk 10 kelompok tiga orang. Ada tiga putaran, masing-masing 20 menit (wawancara 12 menit, umpan balik 8 menit). Peran bergilir sehingga tiap peserta memegang ketiga peran."],
+        [15, 75, "P", "Peserta membentuk 10 kelompok tiga orang. Ada tiga putaran. Tiap putaran terdiri atas wawancara dan umpan balik singkat, dan peran bergilir sehingga tiap peserta memegang ketiga peran."],
         [75, 90, "R", "Tiap kelompok tiga orang menulis dua hal yang akan diubah dalam wawancaranya. Fasilitator merangkum pola yang paling sering muncul."],
       ],
       alat: "Kartu peran berisi fakta tersembunyi, rubrik pengamatan, lembar catatan, penghitung waktu",
@@ -191,7 +191,7 @@ const HARI = [
       akt: [
         [0, 25, "K", "Fasilitator menunjukkan contoh heatmap dan satu pohon akar masalah, lalu menjelaskan cara menyiapkan diri untuk kalibrasi."],
         [25, 55, "P", "Tiap kelompok menyusun heatmap dari hasil Modul 9 dan pohon akar masalah untuk satu posisi stretched atau overload."],
-        [55, 80, "R", "Simulasi kalibrasi. Peserta kelompok lain berperan sebagai panel manajer (Manager, VP, dan HR). Tiap kelompok memaparkan hasilnya 2 menit, lalu menjawab pertanyaan panel 3 menit dengan bukti, dan mencatat keputusan."],
+        [55, 80, "R", "Simulasi kalibrasi. Peserta kelompok lain berperan sebagai panel manajer (Manager, VP, dan HR). Tiap kelompok memaparkan hasilnya secara singkat, lalu menjawab pertanyaan panel dengan bukti dan mencatat keputusan."],
         [80, 90, "P", "Kelompok melengkapi catatan keputusan berdasarkan hasil panel."],
       ],
       alat: "Heatmap (lembar hitung dengan pewarnaan bersyarat), kartu pertanyaan panel, template catatan keputusan, flipchart",
@@ -224,7 +224,7 @@ const HARI = [
   ] },
 ];
 
-// ---------- pemeriksaan waktu: tiap modul tepat 90 menit, hitung porsi ----------
+// ---------- pemeriksaan rancangan: bobot waktu tiap langkah hanya untuk menghitung porsi dan tidak ditampilkan ----------
 const TOT = { K: 0, P: 0, R: 0 };
 HARI.forEach((h) => h.modul.forEach((m) => {
   let t = 0;
@@ -240,19 +240,16 @@ console.log("Porsi", TOT, ALL, pct(TOT.K), pct(TOT.P), pct(TOT.R));
 if (ALL !== 1080) throw new Error("Total harus 1080 menit (24 JPL)");
 
 // ---------- tabel kurikulum format standar tipe 1 (lanskap) ----------
+const cap = (t) => t[0].toUpperCase() + t.slice(1);
 function kurikulum(hari) {
-  const widths = [3900, 5200, 1800, 2100, 1570];
+  const widths = [2700, 3000, 3900, 1700, 1900, 1370];
   const rows = hari.modul.map((m) => [
-    [
-      `**Modul ${m.no}. ${m.judul}**`,
-      `Tujuan: peserta mampu ${m.tujuan}`,
-      "Outline materi:",
-      ...m.outline.map((t, i) => `${i + 1}. ${t}`),
-    ],
-    m.akt.map(([a, b, tag, t]) => `**Menit ${a}-${b} (${LABEL[tag]}).** ${t}`),
+    [`**Modul ${m.no}. ${m.judul}**`, `Tujuan: peserta mampu ${m.tujuan}`],
+    m.outline.map((t, i) => `${i + 1}. ${t}`),
+    m.akt.map(([, , tag, t], i) => `${i + 1}. **${cap(LABEL[tag])}.** ${t}`),
     m.alat, m.ukur, m.out,
   ]);
-  return table(widths, ["Topik atau modul", "Aktivitas pembelajaran (andragogi)", "Alat atau media pelatihan", "Indikator capaian peserta", "Output konkret"], rows, { size: 15 });
+  return table(widths, ["Topik atau modul", "Outline materi", "Aktivitas pembelajaran (andragogi)", "Alat atau media pelatihan", "Indikator capaian peserta", "Output konkret"], rows, { size: 16, gap: 80, lineH: 270, firstFill: true });
 }
 
 // ---------- isi ----------
@@ -378,7 +375,7 @@ const numRef = (ref) => ({ reference: ref, levels: [{ level: 0, format: LevelFor
 
 const kurikulumDoc = [
   h1("4. Kurikulum per hari", false),
-  p("Tabel mengikuti format standar kurikulum Sanggabiz dengan lima kolom. Kata kerja pada tujuan mengikuti taksonomi Bloom revisi. Waktu di kolom aktivitas dihitung per modul 90 menit, dan label di dalam kurung menunjukkan jenis kegiatan: konsep, praktik, atau review.", { after: 100 }),
+  p("Tabel mengikuti format standar kurikulum Sanggabiz dengan enam kolom. Kata kerja pada tujuan mengikuti taksonomi Bloom revisi. Tiap modul berdurasi 2 JPL (90 menit). Langkah aktivitas ditulis berurutan tanpa pembagian menit, sehingga fasilitator dapat menyesuaikan waktu tiap langkah dengan kondisi kelas. Label konsep, praktik, dan review menunjukkan jenis kegiatan.", { after: 100 }),
   ...HARI.flatMap((h, i) => [
     new Paragraph({ children: [new TextRun({ text: h.judul, bold: true, size: 22, color: NAVY })], spacing: { before: i ? 0 : 120, after: 100 }, pageBreakBefore: i > 0, keepNext: true }),
     kurikulum(h),
@@ -407,5 +404,5 @@ const doc = new Document({
 
 const outDir = path.join(__dirname, "..", "kurikulum");
 fs.mkdirSync(outDir, { recursive: true });
-const out = path.join(outDir, "v1 Kurikulum Pelatihan Tiga Hari ABK - PT Pupuk Iskandar Muda.docx");
+const out = path.join(outDir, "v2 Kurikulum Pelatihan Tiga Hari ABK - PT Pupuk Iskandar Muda.docx");
 Packer.toBuffer(doc).then((buf) => { fs.writeFileSync(out, buf); console.log("ditulis:", out); });

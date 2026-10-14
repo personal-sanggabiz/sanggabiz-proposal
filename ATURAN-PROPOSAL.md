@@ -31,10 +31,12 @@ Cara memakainya: sediakan alurnya di proposal bila waktu program memungkinkan pe
 ## 3. Silabus
 Silabus ditulis per sesi dan per topik, cukup rinci supaya semua pembaca memahaminya dengan cara yang sama.
 1. Ringkasan di awal: sesi, topik, durasi, hasil.
-2. Tiap sesi dipecah menjadi topik. Tiap topik memuat: **tujuan pembelajaran** (kata kerja Bloom), **outline materi** (butir bernomor), **aktivitas** (urutan langkah dengan menit, siapa melakukan apa, bahan yang dipegang peserta), **alat dan media**, **output**, dan **ukuran keberhasilan**.
+2. Tiap sesi dipecah menjadi topik. Tiap topik memuat: **tujuan pembelajaran** (kata kerja Bloom), **outline materi** (butir bernomor, ditulis di kolom tersendiri), **aktivitas** (langkah berurutan dan bernomor, siapa melakukan apa, bahan yang dipegang peserta), **alat dan media**, **output**, dan **ukuran keberhasilan**.
 3. Aktivitas menggambarkan keadaan nyata di ruang pelatihan, bukan istilah umum.
-4. Output tiap topik ditulis jelas. Semua output dikumpulkan di bagian "Hasil yang dibawa pulang" dengan keterangan dihasilkan di topik mana.
-5. Tidak ada istilah yang bisa dibaca dua arti. Bila memakai istilah teknis, jelaskan sekali di tempat pertama muncul.
+4. Aktivitas tidak dibagi per menit. Durasi hanya ditulis per modul (dalam JPL), karena jalannya kelas berubah menurut peserta dan pembagian menit per langkah tidak fleksibel bagi fasilitator. Tiap langkah diberi label jenis kegiatan: konsep, praktik, atau review. Hindari batas menit di dalam kalimat langkah. Tulis hasil yang diminta atau kata "singkat". Keseimbangan belajar cukup dinyatakan sebagai porsi garis besar konsep, praktik, dan review.
+5. Pemakaian aturan ini pada proposal lama: bagian yang masih membagi aktivitas per menit diganti saat disentuh berikutnya.
+6. Output tiap topik ditulis jelas. Semua output dikumpulkan di bagian "Hasil yang dibawa pulang" dengan keterangan dihasilkan di topik mana.
+7. Tidak ada istilah yang bisa dibaca dua arti. Bila memakai istilah teknis, jelaskan sekali di tempat pertama muncul.
 
 ## 4. Anggaran untuk klien
 1. Tampilkan satu opsi, yaitu paket paling ekonomis yang tetap memenuhi tujuan dan hasil program. Opsi lain hanya bila klien memintanya.

@@ -1,20 +1,22 @@
 # CATATAN TIM: Kurikulum pelatihan tiga hari ABK PIM
 
-Isi catatan ini hanya untuk tim. Dokumen klien ada di `kurikulum/v1 Kurikulum Pelatihan Tiga Hari ABK - PT Pupuk Iskandar Muda.docx` (14 halaman). Dokumen itu usulan pengganti bagian 7.4 pada v3. `proposal/v3` dan `proposal/v2` tidak diubah.
+Isi catatan ini hanya untuk tim. Dokumen klien ada di `kurikulum/v2 Kurikulum Pelatihan Tiga Hari ABK - PT Pupuk Iskandar Muda.docx` (14 halaman). Dokumen itu usulan pengganti bagian 7.4 pada v3. `proposal/v3` dan `proposal/v2` tidak diubah. `kurikulum/v1` disimpan sebagai arsip (tabel lima kolom dengan menit per langkah, dibuat oleh `_build/build_kurikulum_v1.js`).
+
+Perubahan v1 ke v2: kolom Outline materi dipisah, pembagian menit per langkah dihapus (tidak fleksibel), jarak antarbaris dilonggarkan, dan langkah aktivitas dibernomori dengan label konsep, praktik, atau review. Aturannya sudah masuk ke `ATURAN-PROPOSAL.md` bagian 3 dan `FORMAT-STANDAR-PROPOSAL.md` tipe 1.
 
 ## 1. Yang diubah dari 7.4 di v3
 | Hal | Di v3 (7.4) | Di kurikulum baru |
 |---|---|---|
 | Urutan | Hari 1 membaca heatmap dan menghitung FTE, padahal data belum dikumpulkan. Pengumpulan data baru Hari 2 | Mengikuti urutan kerja ABK: inventaris, rencana data, wawancara, lembar kerja, uji mutu, hitung FTE, baca hasil, tindak lanjut |
-| Kolom tabel | 4 kolom (hari, modul, materi, bukti belajar) | 5 kolom format standar tipe 1, plus tujuan dengan kata kerja Bloom dan outline bernomor di dalam sel modul |
-| Aktivitas | Daftar istilah per modul | Aktivitas per menit: siapa melakukan apa, bahan apa yang dipegang peserta, berlabel konsep, praktik, atau review |
+| Kolom tabel | 4 kolom (hari, modul, materi, bukti belajar) | 6 kolom format standar tipe 1: topik dan tujuan, outline materi, aktivitas, alat, indikator, output |
+| Aktivitas | Daftar istilah per modul | Langkah bernomor: siapa melakukan apa, bahan apa yang dipegang peserta, berlabel konsep, praktik, atau review, tanpa pembagian menit |
 | Kasus | Tiap modul berdiri sendiri | Satu kasus dari Modul 1 sampai 12. Lima kelompok masing-masing memegang tiga posisi, output satu modul menjadi bahan modul berikutnya |
 | Hitung FTE | Sekali, dengan contoh kasus | Dua kali: Modul 3 (perkiraan) dan Modul 9 (data teruji), plus uji sensitivitas jam kerja efektif |
 | Wawancara | Teori dan role play dalam modul yang padat | Dua modul: teknik (dengan peragaan dua versi) dan bermain peran tiga putaran dengan kartu peran berisi fakta tersembunyi, sehingga keberhasilan terukur |
-| Hari 3 | Modul 12 memuat rencana tindak, post-test, dan penutupan dalam 90 menit | Modul 12 dipecah per menit: konsep 15, rencana 35, berbagi 10, post-test 20, evaluasi dan penutupan 10 |
+| Hari 3 | Modul 12 memuat rencana tindak, post-test, dan penutupan dalam satu baris | Modul 12 dipecah menjadi lima langkah berurutan: penjelasan target terukur, rencana 30-60-90, berbagi, post-test, evaluasi dan penutupan |
 | Pembuka | Pre-test | Peserta menebak FTE tanpa alat hitung lebih dulu, lalu melihat sebaran tebakan sebelum menerima rumus (Kolb) |
 
-Total tetap 12 modul, 24 JPL, 30 peserta, dua fasilitator. Porsi hasil hitungan skrip: 265 menit konsep (25 persen), 585 praktik (54 persen), 230 review (21 persen), total 1.080 menit. Skrip menolak total selain 1.080 dan modul selain 90 menit.
+Total tetap 12 modul, 24 JPL, 30 peserta, dua fasilitator. Porsi rancangan: 25 persen konsep, 54 persen praktik, 21 persen review. Angka ini dihitung skrip dari bobot waktu per langkah yang hanya dipakai untuk perhitungan dan tidak ditampilkan di dokumen. Skrip menolak modul yang tidak berjumlah 90 menit.
 
 ## 2. Keputusan dan hal yang perlu dikonfirmasi
 1. **Data kasus.** Rancangan memakai tiga posisi fungsi Umum per kelompok, data anonim dari PIM, dipilih pada H-14 sampai H-7. Apakah PIM mau membagikan? Bila tidak, tim menyiapkan kasus simulasi. Bobot kerja menyiapkannya perlu dihitung.
