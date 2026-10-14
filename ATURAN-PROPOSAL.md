@@ -71,6 +71,8 @@ Silabus ditulis per sesi dan per topik, cukup rinci supaya semua pembaca memaham
 4. Versi lama tidak pernah dihapus. Saat membuat v2, v3, dan seterusnya, file versi sebelumnya tetap disimpan di folder yang sama sebagai arsip. Penghapusan hanya atas permintaan tim.
 5. Bila skrip pembuat dokumen diperbarui, simpan salinan skrip versi lama (misalnya `build_proposal_v1.js`) supaya versi lama tetap bisa dibuat ulang.
 
+6. Bila dokumen harus mengikuti desain dokumen yang sudah ada (misalnya berkas dari klien atau rekan), ubah salinannya lewat skrip dan jangan membuatnya ulang dari nol, supaya font, warna, dan tata letak tetap sama. Simpan skripnya di `_build/`.
+
 ## 9. Isi dokumen klien
 1. Dokumen klien tidak memuat catatan internal, kata internal, atau jejak proses kerja. Contohnya: menyebut aturan atau format standar Sanggabiz, jumlah kolom tabel sebagai "standar kami", nomor bagian proposal lain yang akan "diganti", status draf atau nomor versi di dalam isi, nama berkas, keputusan atau keraguan tim, status verifikasi sumber, dan hitungan internal.
 2. Hal-hal itu ditulis di catatan tim pada folder proyek, tidak di dokumen yang dikirim.

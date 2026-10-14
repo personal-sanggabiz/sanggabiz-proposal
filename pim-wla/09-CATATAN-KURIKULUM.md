@@ -8,6 +8,8 @@ Isi catatan ini hanya untuk tim. Dokumen klien terbaru ada di `kurikulum/v3 Kuri
 | `kurikulum/v2` | Enam kolom, outline di kolom sendiri, tanpa menit per langkah | `_build/build_kurikulum_v2.js` |
 | `kurikulum/v3` | Siap kirim: tanpa sampul dan tanpa kata internal, bahasa awam, daftar istilah, rujukan buku untuk Bloom, Kolb, dan backward design | `_build/build_kurikulum.js` |
 
+Versi yang masuk ke proposal: `proposal/v4` (31 halaman). Desain dan isinya sama dengan `proposal/v3` (turunan langsung berkas sumber, font Arial, header dan latar halaman asli), hanya bagian 7.4 yang diganti. Skripnya `_build/susun_proposal_v4.py` mengedit salinan v3 secara langsung, sehingga tidak ada perubahan font atau tata letak di bagian lain. Isi 7.4 sengaja ringkas: pengantar dua paragraf dan tiga tabel per hari dengan enam kolom (huruf 8 pt). Daftar istilah dan rujukan tidak dimasukkan. Dokumen kurikulum terpisah (`kurikulum/v3`) tetap dipakai bila perlu versi rinci.
+
 Aturan baru dari revisi ini ada di `ATURAN-PROPOSAL.md` bagian 3 (tanpa menit per langkah, outline kolom sendiri), bagian 6 butir 4 (bahasa awam), dan bagian 9 (tidak ada catatan internal di dokumen klien).
 
 ## 1. Yang diubah dari 7.4 di v3
@@ -36,6 +38,7 @@ Total tetap 12 modul, 24 JPL, 30 peserta, dua fasilitator. Porsi rancangan: 25 p
 | Bagian | Yang perlu disesuaikan |
 |---|---|
 | 7.3 Tujuan pembelajaran dan porsi belajar | Tertulis 25 persen konsep, 55 persen praktik, 20 persen review. Hasil rancangan 25, 54, 21. Selisihnya ringan, tetapi samakan |
+| 7.3 Tujuan pembelajaran | Masih memakai istilah Inggris (hidden work, seasonality, annualisasi). Tidak diubah karena fokus revisi hanya 7.4, tetapi tidak sejalan dengan bahasa awam di 7.4 baru |
 | 7.5 Kirkpatrick | Tidak diubah, sesuai arahan. Rujukan pulse survey harian dan post-test di Modul 12 sudah sejalan |
 | 7.6 Luaran | Tambahkan rencana pengumpulan data, rubrik wawancara, catatan keputusan, template RACI sebelum dan sesudah, matriks prioritas, lembar hitung FTE baku dengan tabel skenario, kartu peran, dan lembar uji |
 | Tabel jadwal pelaksanaan | Tidak berubah |
