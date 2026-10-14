@@ -80,3 +80,4 @@ Silabus ditulis per sesi dan per topik, cukup rinci supaya semua pembaca memaham
 2. Hal-hal itu ditulis di catatan tim pada folder proyek, tidak di dokumen yang dikirim.
 3. Lampiran proposal tidak diberi sampul sendiri bila halaman pertamanya sudah memuat judul, penyusun, penerima, dan bulan.
 4. Pemeriksaan sebelum kirim: baca dokumen sebagai pihak luar yang tidak mengenal Sanggabiz. Hapus kalimat yang hanya masuk akal bagi tim. Cari kata "standar Sanggabiz", "draf", "pengganti", "versi", dan "ISI TIM" di hasil akhir. Tanda `[ISI TIM: ...]` hanya boleh ada bila memang menunggu isian tim, dan harus beres sebelum dokumen dikirim.
+5. Saat mengganti nama atau logo perusahaan di dokumen yang sudah ada, periksa juga teks yang tertanam di dalam gambar, misalnya sampul dan latar halaman. Pencarian teks biasa tidak menemukannya. Buka setiap gambar yang memuat tulisan dan cocokkan dengan isi dokumen.

@@ -88,3 +88,27 @@ Porsi rancangan 23 persen penjelasan, 57 persen praktik, 20 persen review, dihit
 3. **Target Kirkpatrick.** Post-test minimal 75 dan peningkatan 20 persen tidak diubah. Dengan waktu lebih singkat, target level 2 sedikit lebih berat. Bagian 7.5 belum dipelajari ulang untuk dua hari selain nomor hari.
 4. **Alasan menyarankan dua hari.** Peserta lebih mudah dilepas dari pekerjaan, biaya perjalanan fasilitator lebih rendah, dan keterampilan inti tetap tercakup. Kekurangannya: pendalaman pindah ke klinik D+30.
 5. **Bagian 7.3 dan 7.6** tidak diubah selain angka durasi. Istilah Inggris di 7.3 (hidden work, annualisasi) masih ada.
+
+## 6. Deck PPT kurikulum dua hari
+Berkas: `proposal/v1 Proposal Kurikulum Pelatihan ABK 2 Hari - PT Pupuk Iskandar Muda.pptx` (12 slide, PDF pratinjau di `preview-deck/`). Skrip: `_build/build_kurikulum_deck.js`.
+
+**Isi slide:** 1 sampul, 2 ringkasan (angka besar), 3 enam pertimbangan rancangan, 4 alur satu kasus delapan modul, 5 jadwal harian, 6 dan 8 silabus per hari (kolom: hari dan fokus, topik, outline, tujuan, format materi), 7 dan 9 aktivitas dan output per hari (kolom: topik, aktivitas, alat, indikator, output), 10 yang dibawa pulang, 11 evaluasi empat level, 12 penutup dan kontak.
+
+**Keputusan rancangan**
+1. Keluarga warna compro (navy, kuning, teal) sesuai catatan di `FORMAT-STANDAR-PROPOSAL.md`: satu keluarga warna per dokumen. Slide padat berlatar putih, slide ringkasan berlatar navy.
+2. Font Arial di seluruh deck. Montserrat tidak dipakai karena tidak ada di semua komputer, dan kemungkinan itu penyebab dokumen Word sebelumnya terlihat "pecah" di komputer pengguna.
+3. Isi mengikuti proposal v5 (dua hari, delapan modul) dan perubahan yang sudah disepakati: tanpa tinjauan D+60 sampai D+90, formulir Level 4 satu halaman diserahkan di Hari 2, istilah "online implementation clinic D+30".
+4. Teks slide ringkas dan tanpa menit per langkah. Daftar istilah tidak dibuat. FTE dijelaskan sekali di slide 2, D+30 di slide 11.
+
+**Perlu dicek tim**
+1. Rujukan di slide 3 (Permen PANRB 1/2020, Wiggins dan McTighe, Kolb, Anderson dan Krathwohl, Harms dkk.) belum dicocokkan ke sumbernya. Statusnya sama dengan bagian 4 di atas.
+2. Logo PIM dipotong dari gambar sampul dokumen sumber. Ganti dengan berkas logo resmi bila ada.
+3. Slide 2 menulis "2 fasilitator: utama dan pendamping" tanpa menyebut asalnya, karena soal pendamping lokal Medan belum diputuskan.
+4. Angka contoh 1.600 jam dan FTE 1,28, 1,14, 1,07 di slide 9 berlabel "contoh latihan, bukan angka PIM".
+5. Deck belum diperiksa di PowerPoint. Pemeriksaan tampilan memakai LibreOffice. Cek pemenggalan baris di tabel silabus.
+
+**Cara membuat ulang:** pasang `pptxgenjs`, lalu jalankan `NODE_PATH=<folder node_modules> APPLY_THEME=<apply_theme.js dari skill pptx> node _build/build_kurikulum_deck.js`. Ikon dibuat dari `react-icons` (Feather) dan disimpan di `_build/assets/icons/`.
+
+## 7. Temuan: sampul v3, v4, dan v5 masih memuat "Levner Consulting"
+Gambar sampul dokumen sumber memuat tulisan "Diajukan oleh Levner Consulting" dan judul lama ("untuk Seluruh Direktorat dan Seluruh SOP") sebagai bagian gambar. Saat penggantian identitas, hanya logo di gambar yang diganti, tulisan di dalam gambar terlewat. Berlaku untuk `proposal/v3`, `v4`, dan `v5`. Perbaikannya perlu mengedit gambar sampul (`word/media/image3.png`) dan sebaiknya dikerjakan bersama keputusan cakupan baru. Aturan pencegahannya sudah masuk ke `ATURAN-PROPOSAL.md` bagian 9 butir 5.
+
