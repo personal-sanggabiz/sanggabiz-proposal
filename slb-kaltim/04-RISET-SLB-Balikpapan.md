@@ -22,7 +22,7 @@ Disusun 7 Okt 2026 dari pencarian web. **Keterbatasan:** sandbox ini hanya bisa 
 |---|---|---|
 | **PP 13/2020** tentang Akomodasi yang Layak untuk Peserta Didik Penyandang Disabilitas | Dasar akomodasi dan **Unit Layanan Disabilitas (ULD)**. Pemerintah wajib memfasilitasi lewat anggaran, sarpras, penyiapan pendidik, dan kurikulum | Tinggi ([setkab](https://setkab.go.id/inilah-pp-13-2020-tentang-akomodasi-yang-layak-untuk-peserta-didik-penyandang-disabilitas/), [kemenko PMK](https://www.kemenkopmk.go.id/unit-layanan-disabilitas-wujudkan-akses-pendidikan-inklusif-bagi-penyandang-disabilitas)) |
 | **Permendikbudristek 48/2023** (akomodasi yang layak, tindak lanjut PP 13/2020) | Aturan turunan di sektor pendidikan | Sedang, nomor dari ringkasan pencarian, **cek ulang** |
-| **Perwali Balikpapan No. 3/2013** tentang Penyelenggaraan Pendidikan Inklusif | Dasar lokal sekolah inklusif | Sedang, **cek teks resmi** di [JDIH Balikpapan](https://jdih.balikpapan.go.id) |
+| **Perwali Balikpapan No. 9/2018** tentang Penyelenggaraan Pendidikan Inklusif (koreksi 15 Okt 2026: sebelumnya tertulis No. 3/2013, teks resmi di [BPK](https://peraturan.bpk.go.id/Download/88906/PERWALI%20NOMOR%209%202018.pdf) menyebut Nomor 9 Tahun 2018) | Dasar lokal sekolah inklusif. Pasal 4: minimal 1 sekolah inklusif SD/SMP per kecamatan, ditetapkan Keputusan Wali Kota | Tinggi |
 | Pedoman Umum Penyelenggaraan Pendidikan Inklusif (2011) | Definisi GPK: minimal S1 PLB atau kependidikan dengan kompetensi PLB | Sedang |
 
 Versi terbaru semua regulasi **perlu dicek** sebelum dikutip di proposal.

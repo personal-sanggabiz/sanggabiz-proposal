@@ -32,6 +32,9 @@ Nama klien/pemberi dana · tanggal pelaksanaan · angka budget. Makna "pertamini
 | `06-KEPUTUSAN-DAN-KERANGKA-DOCX.md` | Keputusan Muchson dan susunan bab proposal |
 | `07-RISET-TEMPAT-HARGA.md` | Harga paket meeting hotel Balikpapan |
 | `08-CATATAN-TIM.md` | **Mulai dari sini bila mau memakai proposal.** Daftar isian tim dan daftar cek sebelum kirim |
+| `09-LINK-DRIVE.md` | Link folder Drive dan dokumen proposal utama (Google Docs) |
+| `10-RISET-SEKOLAH-SASARAN-DAN-KONTAK.md` | Riset nama, kontak, dan instansi pembina 4 SLB dan sekolah inklusif Balikpapan, serta daftar yang masih harus dicari |
+| `bagian-sasaran/` | Bagian "Sekolah Sasaran, Kontak, dan Jalur Pendaftaran Peserta" (docx) untuk ditempel manual ke proposal utama |
 | `proposal/` | **Proposal siap pakai (docx, portrait A4).** Pakai file berawalan `v2` |
 | `_build/` | Skrip pembuat proposal dan grafik, beserta foto dan logo |
 | `sumber/` | File asli yang diterima (docx) |

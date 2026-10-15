@@ -27,7 +27,7 @@ Angka dan klaim di bawah berasal dari ringkasan hasil pencarian web. Sebagian be
 1. 40.164 satuan pendidikan dengan peserta didik berkebutuhan khusus, 5.956 (14,83 persen) punya guru pembimbing khusus, per Desember 2023 (rujukan 1).
 2. SLB Negeri Balikpapan: berdiri 1984, 401 siswa (219 SD, 96 SMP, 86 SMA). Tahun berita belum dipastikan (rujukan 8).
 3. 11 SLB di bawah Pemprov Kaltim (rujukan 7).
-4. Nomor Peraturan Wali Kota tentang pendidikan inklusif (disebut Nomor 3 Tahun 2013). Cek teks resmi di JDIH Balikpapan (rujukan 9).
+4. Nomor Peraturan Wali Kota tentang pendidikan inklusif. **Salah di v2.** Proposal menulis Nomor 3 Tahun 2013, teks resmi di BPK adalah Nomor 9 Tahun 2018 (rujukan 9). Perbaiki di bab 1.1 dan daftar rujukan. Detail di `10-RISET-SEKOLAH-SASARAN-DAN-KONTAK.md`.
 5. Pernyataan Komisi IV DPRD Kaltim tentang kebutuhan guru PLB (rujukan 6).
 6. **Orchid Room, Quest Hotel:** luas 120 m2 diambil dari data ruang rapat hotel (satu-satunya ruang rapat, 120 m2) dan harga Rp 148.500 dari XWORK (kapasitas 28 sampai 100 orang). Pastikan keduanya merujuk ruang yang sama. Delapan kelompok berisi 10 orang di ruang 120 m2 perlu diperiksa langsung ke hotel. Bila ruang terasa padat, ganti ke Swiss-Belhotel atau Novotel (lihat `07-RISET-TEMPAT-HARGA.md`) dan perbarui bab 2 dan 5.
 7. Foto hotel tidak dapat diambil dari lingkungan kerja ini (akses internet dibatasi). Tempel foto dari situs atau pihak hotel dan cantumkan sumbernya.
