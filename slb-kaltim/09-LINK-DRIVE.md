@@ -15,7 +15,10 @@ Dicatat 15 Oktober 2026 atas permintaan Muchson.
 
 | 15 Oktober 2026 | **v3 Pengganti Bab 2.3 Peserta dan Sekolah Sasaran** (Google Docs, 6 halaman: lima kategori sekolah, kuota 80 guru, data guru dan siswa, jaringan pendukung, rujukan [16] sampai [25]). **Pakai yang ini.** | https://docs.google.com/document/d/1n1pJCCP51SLpY7kLG3wWyJSzwC3NnjPnH6BBJ9drYYc/edit |
 
-Versi v1 dan v2 di atas tetap disimpan sebagai arsip. Sumber lokal: `bagian-sasaran/` (docx) dan skrip `_build/build_bagian_sasaran.js` (v3), `build_bagian_sasaran_v2.js`, `build_bagian_sasaran_v1.js`.
+| 15 Oktober 2026 | **v4 Pengganti Bab 2.3 Peserta dan Sekolah Sasaran** (Google Docs, 8 halaman: kuota per sekolah dari data nyata, 21 sekolah sasaran dengan kontak, jaringan pendukung, rujukan [16] sampai [28]). **Pakai yang ini.** | https://docs.google.com/document/d/1pRjfi4IBCL5NhBjIRJzRGrKwrFyGbcg4IpEEyKwxXOo/edit |
+| 15 Oktober 2026 | **v4 Lampiran D, data 274 SD dan SMP** (Google Sheet: NPSN, nama, jenjang, status, kecamatan, guru, siswa). Versi docx 6 halaman ada di `bagian-sasaran/` | https://docs.google.com/spreadsheets/d/1DGyr6VJERKMyjAZgXpKYyMvwTjajERQY2sx_fRch0hs/edit |
+
+Versi v1, v2, dan v3 di atas tetap disimpan sebagai arsip (v3 sudah digantikan v4). Sumber lokal: `bagian-sasaran/` (docx) dan skrip `_build/build_bagian_sasaran.js` (v3), `build_bagian_sasaran_v2.js`, `build_bagian_sasaran_v1.js`.
 
 ## Aturan pemakaian
 1. Hasil kerja baru diunggah ke folder utama. Dokumen proposal utama tidak diubah oleh Claude. Muchson menempel bagian baru ke dokumen itu secara manual.

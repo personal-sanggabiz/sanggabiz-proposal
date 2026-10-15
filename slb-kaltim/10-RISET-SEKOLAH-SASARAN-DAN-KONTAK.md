@@ -82,6 +82,14 @@ Temuan:
 
 Belum ditemukan: data guru dan siswa SMA Negeri 1, 2, 7, 8 dan SMK Negeri 4, 5, 6, serta daftar lengkap SD dan SMP inklusif (menunggu Keputusan Wali Kota dari Disdikbud Kota).
 
+## 6c. Tambahan 15 Oktober 2026 (malam): data seluruh SD dan SMP, kuota per sekolah
+- **Data seluruh sekolah.** `data/sd-smp-balikpapan.psv` memuat 274 SD dan SMP (195 SD, 79 SMP, 166 negeri) dengan 4.622 guru dan 99.745 siswa, dari Sekolah Kita (semester 2026/2027 Gasal). Total dicocokkan dengan hitungan di sumber dan di Google Sheet (rumus SUM). Referensi Kemendikdasmen mencatat 198 SD dan 81 SMP, selisih 3 SD dan 2 SMP.
+- **Sekolah inklusif SD/SMP.** Tiga sumber bertentangan soal nama SD: KPFM 12 Juli 2019 (Kepala Dinas) menyebut SDN 008 Balikpapan Kota, SMPN 5, SMAN 4. IDN Times 15 Juli 2019 (Kepala Dinas) menyebut SDN 08, SMPN 4, SMPN 5. IDN Times 10 Februari 2020 (Wakil Wali Kota) menyebut SDN 010, SMPN 5, SMAN 4. Jurnal Kolaboratif Sains 2023 menyebut SDN 08, SMPN 4, SMPN 5 dan mengkaji SDIT Luqman Al-Hakim dan SDIT Assalaam. **SDN 010 ada di keenam kecamatan**, jadi dikeluarkan dari proposal sebelum dinas mengonfirmasi. SDN 008 Balikpapan Kota (NPSN 30402860) dipakai.
+- **Aturan kuota 80:** SLB 40 (separuh guru tiap SLB: 22, 7, 5, 6), SD dan SMP inklusif 24 (4 per kecamatan: Kota 2+2, Selatan 4, Barat 4, Tengah 4, Timur 4 menunggu nama, Utara 4 menunggu nama), SMA dan SMK inklusif 16 (2 per sekolah, 8 sekolah, 465 guru).
+- Data 8 SMA dan SMK inklusif lengkap (alamat, kontak, guru, siswa) di bab 2.3.4 dokumen v4.
+- Jurnal ICSAR (UM) tentang SD inklusif di Balikpapan tidak bisa dibuka dari sini (403), mungkin memuat nama sekolah.
+- Pengambilan data lewat halaman profil Sekolah Kita per ID sekolah. Fitur pencarian di portal itu memakai captcha dan tidak dipakai.
+
 ## 7. Keterbatasan riset
 Situs Dapodik (`dapo.kemendikdasmen.go.id`) menolak akses dari lingkungan ini sehingga jumlah siswa dan guru per sekolah tidak terambil. Pencarian web tidak menemukan daftar SD dan SMP inklusif. Seluruh data di atas dibaca langsung dari halaman resmi pada 15 Oktober 2026, bukan dari ringkasan.
 

@@ -1,0 +1,260 @@
+// v3: pengganti sub-bagian 2.3 "Peserta dan Cara Rekrutmen" (docx) untuk ditempel manual ke proposal utama.
+// Versi lama: build_bagian_sasaran_v1.js (bagian terpisah), build_bagian_sasaran_v2.js (empat SLB dan sekolah inklusif SMA/SMK).
+// Jalankan: NODE_PATH=<folder node_modules berisi docx> node build_bagian_sasaran.js
+const fs = require("fs");
+const path = require("path");
+const {
+  Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, Footer,
+  AlignmentType, BorderStyle, WidthType, ShadingType, PageNumber, LevelFormat, VerticalAlign, TabStopType,
+} = require("docx");
+
+const NAVY = "0B396D", INK = "1D1D1F", MUTED = "5C5F66", GOLD = "FFC00C", LINE = "C9D2DE", WARN = "9A3412";
+const FONT = "Montserrat";
+const W = 9638;
+
+// ---------- penolong teks (sama dengan build_proposal.js) ----------
+function runs(text, base = {}) {
+  const out = [];
+  const re = /(\[ISI TIM:[^\]]*\])|(\*\*[^*]+\*\*)/g;
+  let last = 0, m;
+  while ((m = re.exec(text))) {
+    if (m.index > last) out.push(new TextRun({ text: text.slice(last, m.index), ...base }));
+    if (m[1]) out.push(new TextRun({ text: m[1], ...base, bold: true, shading: { type: ShadingType.CLEAR, fill: "FFF200", color: "auto" }, color: INK }));
+    else out.push(new TextRun({ text: m[2].slice(2, -2), ...base, bold: true }));
+    last = m.index + m[0].length;
+  }
+  if (last < text.length) out.push(new TextRun({ text: text.slice(last), ...base }));
+  return out;
+}
+const p = (text, o = {}) => new Paragraph({
+  children: runs(text, o.run || {}), alignment: o.align || AlignmentType.LEFT,
+  spacing: { after: o.after ?? 110, before: o.before ?? 0, line: o.line ?? 290 }, keepNext: o.keepNext, indent: o.indent,
+});
+const h2 = (text) => new Paragraph({ heading: "Heading2", children: [new TextRun({ text })], keepNext: true });
+const h3 = (text) => new Paragraph({ children: [new TextRun({ text, bold: true, size: 20, color: NAVY })], spacing: { before: 200, after: 90 }, keepNext: true });
+const bullet = (text) => new Paragraph({ numbering: { reference: "bul", level: 0 }, children: runs(text), spacing: { after: 70, line: 290 } });
+const note = (text) => new Paragraph({ children: runs(text, { size: 16, color: MUTED }), spacing: { before: 60, after: 160, line: 260 } });
+const step = (text) => p(text, { indent: { left: 360, hanging: 360 } });
+const refP = (n, t) => new Paragraph({
+  spacing: { after: 70, line: 260 }, indent: { left: 420, hanging: 420 }, tabStops: [{ type: TabStopType.LEFT, position: 420 }],
+  children: [new TextRun({ text: `[${n}]\t${t}`, size: 16 })],
+});
+const pageBreak = () => new Paragraph({ children: [], pageBreakBefore: true, spacing: { after: 0 } });
+const gap = () => p("", { after: 60 });
+
+// ---------- penolong tabel ----------
+const thin = { style: BorderStyle.SINGLE, size: 4, color: LINE };
+const borders = { top: thin, bottom: thin, left: thin, right: thin };
+function cell(content, width, o = {}) {
+  const lines = Array.isArray(content) ? content : [content];
+  return new TableCell({
+    width: { size: width, type: WidthType.DXA }, borders,
+    shading: o.fill ? { fill: o.fill, type: ShadingType.CLEAR, color: "auto" } : undefined,
+    verticalAlign: VerticalAlign.TOP, margins: { top: 70, bottom: 70, left: 100, right: 100 },
+    children: lines.map((t) => new Paragraph({
+      alignment: o.align || AlignmentType.LEFT, spacing: { after: 30, line: 260 },
+      children: runs(t, { size: o.size || 17, bold: o.bold, color: o.color || INK }),
+    })),
+  });
+}
+// o.right = indeks kolom yang rata kanan, o.total = baris terakhir diberi latar
+function table(widths, header, rows, o = {}) {
+  const right = o.right || [];
+  const head = new TableRow({ tableHeader: true, cantSplit: true, children: header.map((t, i) => cell(t, widths[i], { fill: NAVY, color: "FFFFFF", bold: true, size: 16, align: right.includes(i) ? AlignmentType.RIGHT : undefined })) });
+  const body = rows.map((r, ri) => new TableRow({
+    cantSplit: true,
+    children: r.map((c, i) => cell(c, widths[i], {
+      fill: o.total && ri === rows.length - 1 ? "DCE6F2" : (ri % 2 ? "F7F9FC" : undefined),
+      align: right.includes(i) ? AlignmentType.RIGHT : undefined,
+    })),
+  }));
+  return new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: widths, rows: [head, ...body] });
+}
+
+// ---------- halaman petunjuk (untuk tim, dihapus sebelum ditempel) ----------
+const petunjuk = [
+  new Paragraph({
+    children: [new TextRun({ text: "PETUNJUK PENEMPELAN (hapus halaman ini sebelum ditempel)", bold: true, size: 20, color: WARN })],
+    spacing: { after: 140 }, border: { bottom: { style: BorderStyle.SINGLE, size: 8, color: WARN, space: 6 } },
+  }),
+  h2("Di mana menaruhnya"),
+  step("1. **Ganti seluruh sub-bagian 2.3 Peserta dan Cara Rekrutmen** di Bab 2 dengan isi halaman berikutnya. Judul dan nomornya sudah sama. Tabel jadwal H-21 sampai Hari-H dari proposal v2 sudah dibawa ke 2.3.7, jadi tidak ada yang hilang."),
+  step("2. **Tambahkan rujukan baru [16] sampai [25]** di akhir Lampiran C (halaman terakhir dokumen ini). Proposal v2 berhenti di rujukan [15]."),
+  step("3. **Perbaiki satu kalimat di Bab 1.1.** Ganti \"Peraturan Wali Kota Nomor 3 Tahun 2013 tentang penyelenggaraan pendidikan inklusif [9]\" menjadi \"Peraturan Wali Kota Nomor 9 Tahun 2018 tentang Penyelenggaraan Pendidikan Inklusif [18]\"."),
+  step("4. **Angka siswa SLB Negeri Balikpapan di Bab 1.1 dan Gambar 2** (401 siswa, dari berita ANTARA) lebih lama daripada data Kemendikdasmen semester 2026/2027 Gasal (381 siswa). Ganti bila Anda ingin angka di seluruh dokumen sama."),
+  step("5. **Surat Pengantar.** Instansi penerima yang tepat ada dua: Kepala Cabang Dinas Pendidikan Wilayah I Provinsi Kalimantan Timur dan Kepala Dinas Pendidikan dan Kebudayaan Kota Balikpapan. Alamat dan kontaknya ada di 2.3.6."),
+  h2("Temuan yang mengubah rencana"),
+  p("Seluruh guru di empat SLB Balikpapan hanya 80 orang, jadi 80 peserta tidak bisa berasal dari SLB saja. Karena itu kuota dibagi ke empat kategori, dan setengahnya (40) berasal dari sekolah inklusif."),
+  h2("Isian yang tersisa"),
+  p("Satu tanda kuning di 2.3.3: daftar SD dan SMP inklusif selain tiga yang sudah tercatat. Daftar lengkapnya ditetapkan Keputusan Wali Kota dan belum terbit di sumber publik."),
+  h2("Cek sebelum dikirim"),
+  step("1. Telepon keempat SLB. Di data sumber, kolom telepon dan faks berisi nomor yang sama, jadi bisa jadi itu saluran faks."),
+  step("2. Nomor SLB Tunas Bangsa tertulis 8870057 tanpa kode area. Kode 0542 ditambahkan oleh tim riset kami."),
+  step("3. Status inklusif SDN 010, SMP Negeri 5, dan SMA Negeri 4 berasal dari berita Februari 2020. Konfirmasi ke Disdikbud Kota."),
+  step("4. Daftar SMA dan SMK inklusif berasal dari Juknis SPMB 2025. Cek apakah Juknis 2026 mengubahnya."),
+  step("5. Jumlah guru dan siswa per sekolah berasal dari portal Sekolah Kita, semester 2026/2027 Gasal, dan bisa berubah."),
+  step("6. Kuota per kategori (40 SLB, 24 SD dan SMP, 16 SMA dan SMK) adalah usulan. Ubah bila klien menetapkan lain."),
+];
+
+// ---------- isi pengganti 2.3 ----------
+const isi = [
+  pageBreak(),
+  h2("2.3 Peserta dan Cara Rekrutmen"),
+  p("Peserta adalah 80 guru SLB dan sekolah inklusif di Balikpapan, dari semua jenjang dan semua jenis kekhususan. Peserta tidak membayar, karena biaya ditanggung pemberi dana. Sanggabiz yang mencari dan mengonfirmasi peserta."),
+  p("Balikpapan memiliki empat SLB dengan 80 guru dan 682 siswa, serta 198 SD dan 81 SMP di enam kecamatan [16, 21]. Guru SLB saja belum mencukupi untuk 80 peserta, sehingga kami juga mengundang guru dari sekolah inklusif. Subbagian berikut membagi sasaran ke lima kategori, menyebut kontak tiap sekolah dan instansi pembinanya, lalu menjelaskan cara undangan. Data sekolah diakses pada 15 Oktober 2026."),
+
+  h3("2.3.1 Kategori sekolah sasaran dan kuota peserta"),
+  p("Pendidikan khusus dan pendidikan menengah menjadi urusan pemerintah provinsi. SD dan SMP menjadi urusan pemerintah kota [20]. Karena itu undangan kami berjalan lewat dua instansi: Cabang Dinas Pendidikan Wilayah I yang mewakili Dinas Pendidikan dan Kebudayaan Provinsi Kalimantan Timur di Balikpapan, dan Dinas Pendidikan dan Kebudayaan Kota Balikpapan."),
+  table([1500, 3100, 1800, 1238, 2000],
+    ["Kategori", "Sekolah sasaran", "Guru tercatat", "Kuota", "Instansi pembina"],
+    [
+      ["**A. SLB negeri**", "SLB Negeri Balikpapan", "44 guru", "20", "Cabang Dinas Wilayah I"],
+      ["**B. SLB dan sekolah khusus swasta**", "SLB Tunas Bangsa, SLB Dharma Kencana, Sekolah Khusus Santo Fransiskus Assisi", "36 guru (13, 10, dan 13)", "20", "Cabang Dinas Wilayah I"],
+      ["**C. SD dan SMP inklusif**", "Sekolah yang ditetapkan Keputusan Wali Kota, paling sedikit satu di tiap kecamatan. Tiga sekolah sudah tercatat (2.3.3)", "109 guru di tiga sekolah tercatat", "24", "Disdikbud Kota Balikpapan"],
+      ["**D. SMA dan SMK inklusif**", "8 sekolah negeri (2.3.4)", "47 guru di SMA Negeri 4", "16", "Cabang Dinas Wilayah I"],
+      ["**E. Jaringan pendukung**", "KKG, komunitas orang tua, dan sekolah mitra (2.3.5)", "Tidak dihitung", "Pengundang", "Beragam"],
+      ["**Total peserta**", "", "", "**80**", ""],
+    ], { total: true }),
+  note("Kuota adalah usulan Sanggabiz. Kategori A dan B berjumlah 40, setengah dari seluruh guru SLB di Balikpapan. Kategori C dan D berjumlah 40, dengan rata-rata empat guru per sekolah SD dan SMP serta dua guru per sekolah SMA dan SMK. Guru yang diundang adalah guru kelas, guru mata pelajaran, dan Guru Pembimbing Khusus (GPK) yang memegang kelas dengan murid berkebutuhan khusus. Sumber jumlah guru: portal Sekolah Kita, semester 2026/2027 Gasal [21]."),
+
+  h3("2.3.2 Kategori A dan B: empat SLB di Kota Balikpapan"),
+  p("Referensi Kemendikdasmen mencatat empat SLB di Balikpapan, dua di Kecamatan Balikpapan Selatan dan dua di Kecamatan Balikpapan Kota [16]. Seluruhnya kami undang."),
+  table([380, 2250, 2650, 2658, 1700],
+    ["No", "Sekolah", "Alamat", "Kontak", "Status dan jenjang"],
+    [
+      ["1", ["**SLB Negeri Balikpapan**", "NPSN 30401525"], "Jl. Letkol Pol. HM. Asnawi Arbain RT 14, Kel. Sepinggan Raya, Kec. Balikpapan Selatan", ["Telepon 0542-8879984", "slbn.balikpapan@yahoo.com", "slbnbalikpapan.sch.id"], ["Negeri", "Akreditasi A", "TKLB, SDLB, SMPLB, SMLB"]],
+      ["2", ["**SLB Tunas Bangsa**", "NPSN 30402883"], "Jl. Kutilang RSS Damai III RT 28, Kel. Gunung Bahagia, Kec. Balikpapan Selatan", ["Telepon 0542-8870057 *", "tunasbangsa831@yahoo.co.id", "slbtunasbangsabalikpapan.sch.id"], ["Swasta", "Akreditasi B", "SDLB, SMPLB, SMLB"]],
+      ["3", ["**SLB Dharma Kencana Balikpapan**", "NPSN 30402882"], "Jl. Pembangunan No. 30 Blok A, Kel. Telaga Sari, Kec. Balikpapan Kota", ["Telepon 0542-410406", "slbdk@yahoo.co.id"], ["Swasta", "Akreditasi B", "SDLB, SMPLB, SMLB"]],
+      ["4", ["**Sekolah Khusus Santo Fransiskus Assisi**", "NPSN 69965143"], "Jl. Mayor (Pol) Zaenal Arifin No. 40 RT 18, Kel. Damai, Kec. Balikpapan Kota", ["Telepon 0542-8794310", "skhfransiskusassisi@gmail.com"], ["Swasta", "Akreditasi B", "TKLB, SDLB, SMPLB, SMLB"]],
+    ]),
+  note("* Data sumber mencantumkan nomor 8870057 tanpa kode area. Kami menambahkan kode area Balikpapan (0542). Sumber: Referensi Kemendikdasmen, halaman NPSN masing-masing sekolah [16]."),
+  p("Profil guru dan siswa tiap SLB menjadi dasar pembagian kuota."),
+  table([3200, 1100, 1100, 1100, 1500, 1638],
+    ["Sekolah", "Guru", "Siswa", "Rombel", "Siswa per guru", "Kuota usulan"],
+    [
+      ["SLB Negeri Balikpapan", "44", "381", "44", "9", "20"],
+      ["SLB Tunas Bangsa", "13", "85", "13", "7", "7"],
+      ["SLB Dharma Kencana", "10", "111", "20", "12", "6"],
+      ["Sekolah Khusus Santo Fransiskus Assisi", "13", "105", "14", "9", "7"],
+      ["**Jumlah empat SLB**", "**80**", "**682**", "**91**", "", "**40**"],
+    ], { right: [1, 2, 3, 4, 5], total: true }),
+  note("Sumber: portal Sekolah Kita, Kemendikdasmen, semester 2026/2027 Gasal [21]. Rombel adalah rombongan belajar."),
+
+  h3("2.3.3 Kategori C: SD dan SMP inklusif"),
+  p("Peraturan Wali Kota Balikpapan Nomor 9 Tahun 2018 mewajibkan setiap kecamatan menyelenggarakan paling sedikit satu pendidikan inklusif pada jenjang SD dan SMP, dan menetapkan sekolahnya dengan Keputusan Wali Kota (Pasal 4 ayat 3 dan ayat 5) [18]. Pasal 12 sampai 14 membagi pendidik inklusif menjadi guru kelas atau guru mata pelajaran dan GPK. Kami mengundang keduanya, karena modul ajar berdiferensiasi disusun guru kelas bersama GPK."),
+  p("Jumlah SD dan SMP di tiap kecamatan menunjukkan besarnya kelompok guru yang dapat dijangkau [16]."),
+  table([3200, 1600, 1600, 1600, 1638],
+    ["Kecamatan", "SD", "SMP", "SLB", "Inklusif wajib"],
+    [
+      ["Balikpapan Selatan", "32", "19", "2", "Paling sedikit 1"],
+      ["Balikpapan Timur", "26", "8", "0", "Paling sedikit 1"],
+      ["Balikpapan Utara", "45", "18", "0", "Paling sedikit 1"],
+      ["Balikpapan Tengah", "37", "10", "0", "Paling sedikit 1"],
+      ["Balikpapan Barat", "27", "9", "0", "Paling sedikit 1"],
+      ["Balikpapan Kota", "31", "17", "2", "Paling sedikit 1"],
+      ["**Jumlah**", "**198**", "**81**", "**4**", "**Paling sedikit 6**"],
+    ], { right: [1, 2, 3], total: true }),
+  note("Jumlah sekolah negeri dan swasta. Sumber: Referensi Kemendikdasmen, daftar satuan pendidikan dikdas dan program SLB per kecamatan [16]."),
+  p("Tiga sekolah sudah tercatat sebagai penyelenggara inklusif. Pemberitaan IDN Times pada 10 Februari 2020 menyebut tiga sekolah inklusif di Balikpapan, yaitu SDN 010, SMPN 5, dan SMAN 4 [22]. Pada 19 November 2024, SDN 003 Balikpapan Kota menggelar sosialisasi sekolah inklusi yang diikuti 139 guru dan staf [23]."),
+  table([2500, 2500, 2450, 1000, 1188],
+    ["Sekolah", "Alamat", "Kontak", "Guru", "Siswa"],
+    [
+      [["**SD Negeri 010 Balikpapan Selatan**", "NPSN 30401422, akreditasi A"], "Jl. Sepinggan Baru RT 49, Kec. Balikpapan Selatan", ["Telepon 0542-780285", "sdn010balsel@gmail.com", "sdn010balsel.com"], "31", "777"],
+      [["**SD Negeri 003 Balikpapan Kota**", "NPSN 30401549, akreditasi A"], "Jl. Wiluyo Puspoyudo, Kec. Balikpapan Kota", ["Telepon belum tercatat", "sdn003_balsel@yahoo.co.id"], "29", "639"],
+      [["**SMP Negeri 5 Balikpapan**", "NPSN 30401474, akreditasi A"], "Jl. Prona II No. 104 RT 24, Kec. Balikpapan Selatan", ["Telepon 0542-764142", "balikpapansmpn5@gmail.com", "smp5bpn.sch.id"], "49", "1.287"],
+    ], { right: [3, 4] }),
+  note("Sumber kontak, jumlah guru, dan jumlah siswa: portal Sekolah Kita, semester 2026/2027 Gasal [21]. Status inklusif SDN 010 dan SMP Negeri 5 berasal dari berita 2020 dan akan kami konfirmasi ke dinas."),
+  p("Daftar lengkap sekolah yang ditetapkan Keputusan Wali Kota kami mohon kepada Dinas Pendidikan dan Kebudayaan Kota Balikpapan. [ISI TIM: daftar SD dan SMP penyelenggara inklusif beserta nomor Keputusan Wali Kota, setelah diterima dari Disdikbud Kota]"),
+
+  h3("2.3.4 Kategori D: SMA dan SMK inklusif"),
+  p("Delapan sekolah negeri berikut tercantum sebagai penyelenggara pendidikan inklusif pada Lampiran 9 Petunjuk Teknis SPMB SMA, SMK, dan SLB Kota Balikpapan Tahun 2025 [17]. Penetapannya mengacu pada Surat Keputusan Kepala Dinas Pendidikan dan Kebudayaan Provinsi Kalimantan Timur Nomor 400.3/12060/DISDIKBUD.V/2023."),
+  table([1500, 5238, 2900],
+    ["Jenjang", "Sekolah", "Data yang tercatat"],
+    [
+      ["SMA", "SMA Negeri 1, SMA Negeri 2, SMA Negeri 4, SMA Negeri 7, dan SMA Negeri 8 Balikpapan", ["SMA Negeri 4: 47 guru, 1.186 siswa", "Jl. Sepinggan Baru III No. 36, telepon 0542-780044"]],
+      ["SMK", "SMK Negeri 4, SMK Negeri 5, dan SMK Negeri 6 Balikpapan", "Data guru dan siswa menyusul"],
+    ]),
+  note("Sumber data SMA Negeri 4: portal Sekolah Kita, semester 2026/2027 Gasal [21]."),
+
+  h3("2.3.5 Kategori E: jaringan pendukung"),
+  p("Kategori ini tidak dihitung sebagai kuota. Mereka membantu undangan dan menjadi mitra bila klien menghendaki."),
+  bullet("**KKG PAI Balikpapan Kota.** Kelompok kerja guru ini menggelar bimbingan teknis strategi pendidikan inklusi dalam pembelajaran PAI di SDN 011 Balikpapan Kota pada 26 Juli 2025 [24]. Materinya mencakup pendekatan diferensiasi, sehingga anggotanya menjadi sasaran undangan yang sesuai."),
+  bullet("**ABK Hebat Balikpapan.** Komunitas orang tua anak berkebutuhan khusus yang diketuai Nuri Cahyani menurut berita 2020. Data Dinas Kesehatan Balikpapan pada 2020 memperkirakan 400 sampai 500 anak berkebutuhan khusus di kota ini [22]. Komunitas dapat menyampaikan undangan ke sekolah anak mereka."),
+  bullet("**Guru SLB Negeri Balikpapan sebagai narasumber lapangan.** Salah satu guru SLBN menjadi narasumber sosialisasi inklusi di SDN 003 Balikpapan Kota [23]. SLB sudah dilibatkan sebagai rujukan bagi sekolah inklusif, dan kami mengundang mereka dalam peran yang sama."),
+  bullet("**Pembinaan provinsi.** Dinas Pendidikan dan Kebudayaan Provinsi Kalimantan Timur melatih 60 kepala sekolah dari 10 kabupaten dan kota dalam manajemen pendidikan inklusif di Balikpapan pada 20 sampai 22 Februari 2024 [25]. Peserta pelatihan itu berasal dari seluruh Kaltim, sehingga jaringan alumninya dapat membantu menyebarkan undangan."),
+
+  h3("2.3.6 Kontak instansi pembina"),
+  table([2300, 3100, 2438, 1800],
+    ["Instansi", "Alamat", "Kontak", "Peran dalam program"],
+    [
+      [["**Cabang Dinas Pendidikan Wilayah I**", "Dinas Pendidikan dan Kebudayaan Provinsi Kalimantan Timur"], "Jl. A.W. Syahrani, Batu Ampar, Kec. Balikpapan Utara. Wilayah kerja: Kota Balikpapan dan Kabupaten Penajam Paser Utara", ["Surel cabdindik.kaltim1@gmail.com", "cabdin1.disdikbud.kaltimprov.go.id"], "Rekomendasi dan undangan untuk kategori A, B, dan D"],
+      [["**Dinas Pendidikan dan Kebudayaan Kota Balikpapan**"], "Jl. Ruhui Rahayu I, Kel. Sepinggan, Kec. Balikpapan Selatan", ["Telepon 0812-5591-5591", "Surel disdik@balikpapan.go.id"], "Rekomendasi, daftar sekolah, dan undangan untuk kategori C"],
+    ]),
+  note("Sumber: Petunjuk Teknis SPMB 2025 untuk Cabang Dinas [17] dan situs Dinas Pendidikan dan Kebudayaan Kota Balikpapan [19]."),
+
+  h3("2.3.7 Jalur dan jadwal rekrutmen"),
+  p("Jalur yang kami pakai:", { after: 60 }),
+  bullet("surat permohonan rekomendasi dan data sekolah kepada Cabang Dinas Pendidikan Wilayah I dan Dinas Pendidikan dan Kebudayaan Kota Balikpapan, lalu surat undangan dari dinas melalui pemberi dana,"),
+  bullet("undangan resmi kepada kepala sekolah di kategori A sampai D. Tiap sekolah menunjuk guru yang memegang kelas dengan murid berkebutuhan khusus, dan GPK diprioritaskan,"),
+  bullet("kelompok kerja guru dan musyawarah kerja kepala sekolah (KKG dan MKKS), serta jaringan pada kategori E,"),
+  bullet("jaringan mitra lokal dan kampus di Kalimantan Timur."),
+  p("Calon peserta mengisi formulir pendaftaran daring. Kuota tiap kategori ditutup bila penuh, dan sisa kuota dialihkan ke kategori lain yang masih memiliki pendaftar. Jawaban formulir menjadi pemetaan awal untuk pemateri.", { before: 60 }),
+  table([2200, 7438], ["Waktu", "Kegiatan rekrutmen"], [
+    ["H-21", "Undangan dikirim ke dinas, KKG, MKKS, dan kepala sekolah. Formulir pendaftaran daring dibuka"],
+    ["H-14", "Pendaftaran ditutup bila kuota penuh. Formulir mencatat jenjang, mata pelajaran, jenis kebutuhan murid di kelas, kendala utama, dan kebutuhan akses peserta"],
+    ["H-7", "Konfirmasi kehadiran lewat WhatsApp. Peserta cadangan dihubungi bila ada yang berhalangan"],
+    ["H-3", "Pengingat berisi lokasi, jam, dan petunjuk akses"],
+    ["Hari-H", "Registrasi dan daftar hadir"],
+  ]),
+
+  pageBreak(),
+  h2("Tambahan untuk Lampiran C. Rujukan"),
+  p("Tempel setelah rujukan [15].", { run: { size: 16, color: MUTED } }),
+  refP(16, "Kemendikdasmen. Referensi Data Pendidikan, halaman satuan pendidikan per NPSN 30401525, 30402883, 30402882, dan 69965143, daftar program SLB Kota Balikpapan, serta daftar satuan pendidikan dikdas per kecamatan. https://referensi.data.kemendikdasmen.go.id. Diakses 15 Oktober 2026."),
+  refP(17, "Cabang Dinas Pendidikan Wilayah I Provinsi Kalimantan Timur (2025). Petunjuk Teknis SPMB SMA, SMK, dan SLB Kota Balikpapan Tahun Pelajaran 2025/2026, Lampiran 9. SK Nomor 400.3.8/370.2/Cabdisdikwil.1/2025, 22 April 2025. https://berkas.spmb.id/cabdinbalikpapan/juknis.250521095215.pdf"),
+  refP(18, "Peraturan Wali Kota Balikpapan Nomor 9 Tahun 2018 tentang Penyelenggaraan Pendidikan Inklusif. https://peraturan.bpk.go.id/Download/88906/PERWALI%20NOMOR%209%202018.pdf"),
+  refP(19, "Dinas Pendidikan dan Kebudayaan Kota Balikpapan. Halaman kontak. https://disdikbud.balikpapan.go.id. Diakses 15 Oktober 2026."),
+  refP(20, "Undang-Undang Nomor 23 Tahun 2014 tentang Pemerintahan Daerah, Lampiran huruf A, pembagian urusan pemerintahan bidang pendidikan."),
+  refP(21, "Kemendikdasmen. Sekolah Kita, profil SLBN Balikpapan, SLB Tunas Bangsa, SLB Dharma Kencana, Sekolah Khusus Santo Fransiskus Assisi, SD Negeri 010 Balikpapan Selatan, SD Negeri 003 Balikpapan Kota, SMP Negeri 5 Balikpapan, dan SMA Negeri 4 Balikpapan, semester 2026/2027 Gasal. https://sekolah.data.kemendikdasmen.go.id. Diakses 15 Oktober 2026."),
+  refP(22, "IDN Times Kaltim (10 Februari 2020). Kurang Tenaga Pengajar, Pemkot Balikpapan Akan Bangun Sekolah Inklusi. https://kaltim.idntimes.com/news/kaltim/melani-indra-hapsari/kurang-tenaga-pengajar-pemkot-balikpapan-akan-bangun-sekolah-inklusi"),
+  refP(23, "Balpos (23 November 2024). Sosialisasi Sekolah Inklusi di SDN 003 Balikpapan Kota: Wujudkan Pendidikan Ramah ABK. https://www.balpos.com/pendidikan/1795344660/sosialisasi-sekolah-inklusi-di-sdn-003-balikpapan-kota-wujudkan-pendidikan-ramah-abk"),
+  refP(24, "KKG PAI Balikpapan (27 Juli 2025). Bimtek Pendidikan Inklusi: Wujudkan Pembelajaran PAI yang Ramah dan Adaptif. http://www.kkgpaibalikpapan.com/2025/07/bimtek-pendidikan-inklusi-wujudkan.html"),
+  refP(25, "Dinas Pendidikan dan Kebudayaan Provinsi Kalimantan Timur (28 Februari 2024). Bidang PPK Gelar Manajemen Pengelolaan Pendidikan Inklusif untuk Kepala Sekolah. https://web.disdikbud.kaltimprov.go.id/berita/detail/bidang-ppk-gelar-manajemen-pengelolaan-pendidikan-inklusif-untuk-kepala-sekolah-Ae8qI"),
+];
+
+const footer = new Footer({
+  children: [new Paragraph({
+    border: { top: { style: BorderStyle.SINGLE, size: 6, color: LINE, space: 6 } },
+    tabStops: [{ type: TabStopType.RIGHT, position: W }],
+    children: [
+      new TextRun({ text: "Sanggabiz  |  Workshop Pembelajaran Berdiferensiasi untuk Guru SLB dan Sekolah Inklusif", size: 14, color: MUTED }),
+      new TextRun({ text: "\t", size: 14 }),
+      new TextRun({ children: ["Halaman ", PageNumber.CURRENT], size: 14, color: MUTED }),
+    ],
+  })],
+});
+
+const doc = new Document({
+  creator: "Sanggabiz", title: "Pengganti Bab 2.3 Peserta dan Cara Rekrutmen",
+  styles: {
+    default: { document: { run: { font: FONT, size: 19, color: INK } } },
+    paragraphStyles: [
+      { id: "Heading1", name: "Heading 1", basedOn: "Normal", next: "Normal", quickFormat: true,
+        run: { font: FONT, size: 30, bold: true, color: NAVY },
+        paragraph: { spacing: { before: 0, after: 200 }, outlineLevel: 0, border: { bottom: { style: BorderStyle.SINGLE, size: 14, color: GOLD, space: 6 } } } },
+      { id: "Heading2", name: "Heading 2", basedOn: "Normal", next: "Normal", quickFormat: true,
+        run: { font: FONT, size: 22, bold: true, color: NAVY },
+        paragraph: { spacing: { before: 240, after: 110 }, outlineLevel: 1 } },
+    ],
+  },
+  numbering: { config: [{ reference: "bul", levels: [{ level: 0, format: LevelFormat.BULLET, text: "•", alignment: AlignmentType.LEFT, style: { paragraph: { indent: { left: 500, hanging: 260 } } } }] }] },
+  sections: [{
+    properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 1134, bottom: 1134, left: 1134, right: 1134 } } },
+    footers: { default: footer }, children: [...petunjuk, ...isi],
+  }],
+});
+
+const outDir = path.join(__dirname, "..", "bagian-sasaran");
+fs.mkdirSync(outDir, { recursive: true });
+const out = path.join(outDir, "v3 Pengganti Bab 2.3 Peserta dan Sekolah Sasaran - SLB dan Inklusif Balikpapan.docx");
+Packer.toBuffer(doc).then((buf) => { fs.writeFileSync(out, buf); console.log("ditulis:", out); });
