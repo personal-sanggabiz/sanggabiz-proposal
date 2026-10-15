@@ -11,8 +11,9 @@ Dicatat 15 Oktober 2026 atas permintaan Muchson.
 | Tanggal | File | Link |
 |---|---|---|
 | 15 Oktober 2026 | v1 Bagian Sekolah Sasaran dan Kontak - SLB dan Inklusif Balikpapan (Google Docs, 3 halaman, siap ditempel ke proposal utama) | https://docs.google.com/document/d/1iBY7emM9KsJwVwJLsrCIjx7_RKq5E3OhQ7ZUmIrJf_k/edit |
+| 15 Oktober 2026 | **v2 Pengganti Bab 2.3 Peserta dan Sekolah Sasaran** (Google Docs, 5 halaman: petunjuk penempelan, isi pengganti 2.3, tambahan rujukan [16] sampai [20]). **Pakai yang ini.** | https://docs.google.com/document/d/1VaJIadroP59FdWufCHK2pX3-wmdyUe6oiLWK3onDQLw/edit |
 
-Sumber lokalnya: `bagian-sasaran/` (docx) dan `_build/build_bagian_sasaran.js`.
+Versi v1 di atas tetap disimpan sebagai arsip. Sumber lokal: `bagian-sasaran/` (docx), `_build/build_bagian_sasaran.js` (v2) dan `_build/build_bagian_sasaran_v1.js` (v1).
 
 ## Aturan pemakaian
 1. Hasil kerja baru diunggah ke folder utama. Dokumen proposal utama tidak diubah oleh Claude. Muchson menempel bagian baru ke dokumen itu secara manual.
