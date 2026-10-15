@@ -57,6 +57,31 @@ Tidak dimasukkan sengaja: nomor telepon pribadi guru atau kepala sekolah, dan da
 5. Cek ulang tahun berita ANTARA untuk angka 401 siswa SLBN (kini diberitakan tahun 2024 oleh satu sumber, belum diverifikasi).
 6. Perbaiki nomor Perwali di proposal utama (temuan 2).
 
+## 6b. Tambahan 15 Oktober 2026 (sore): data guru dan siswa, kategori, kuota
+Sumber: portal Sekolah Kita (`sekolah.data.kemendikdasmen.go.id`), semester 2026/2027 Gasal. Halaman profil per sekolah dibaca lewat ID sekolah. Fitur pencarian di portal itu memakai captcha dan tidak dipakai.
+
+| Sekolah | Guru | Siswa | Rombel | Siswa per guru |
+|---|---|---|---|---|
+| SLB Negeri Balikpapan | 44 | 381 | 44 | 9 |
+| SLB Tunas Bangsa | 13 | 85 | 13 | 7 |
+| SLB Dharma Kencana | 10 | 111 | 20 | 12 |
+| SKh Santo Fransiskus Assisi | 13 | 105 | 14 | 9 |
+| **Jumlah** | **80** | **682** | **91** | |
+| SD Negeri 010 Balikpapan Selatan | 31 | 777 | 25 | 26 |
+| SD Negeri 003 Balikpapan Kota | 29 | 639 | 23 | 23 |
+| SMP Negeri 5 Balikpapan | 49 | 1.287 | 33 | 27 |
+| SMA Negeri 4 Balikpapan | 47 | 1.186 | 31 | 26 |
+
+Temuan:
+1. **Seluruh guru di 4 SLB hanya 80 orang**, sama dengan target peserta. Karena itu 80 peserta tidak bisa dari SLB saja. Kuota usulan: SLB 40 (SLBN 20, Tunas Bangsa 7, Dharma Kencana 6, SKh 7), SD dan SMP inklusif 24 (4 guru per sekolah, minimal 6 sekolah), SMA dan SMK inklusif 16 (2 guru per sekolah, 8 sekolah).
+2. Jumlah SD dan SMP di Balikpapan (Referensi Kemendikdasmen): 198 SD dan 81 SMP, tersebar di 6 kecamatan.
+3. Angka siswa SLBN di Referensi lama (ANTARA, 401 siswa) lebih tinggi daripada data sekarang (381). Bab 1.1 proposal v2 memakai 401.
+4. Sekolah inklusif yang tercatat di berita: SDN 010, SMPN 5, dan SMAN 4 (IDN Times, 10 Februari 2020, saat itu hanya tiga sekolah), SDN 003 Balikpapan Kota (sosialisasi 19 November 2024, 139 guru dan staf), SMPN 4 (disebut jurnal 2023, belum diverifikasi, tidak dimasukkan ke proposal).
+5. Jaringan pendukung: KKG PAI Balikpapan Kota (bimtek inklusi 26 Juli 2025 di SDN 011), komunitas ABK Hebat Balikpapan (2020), pelatihan 60 kepala sekolah se-Kaltim di Balikpapan (20 sampai 22 Februari 2024). Estimasi Dinas Kesehatan 2020: 400 sampai 500 anak berkebutuhan khusus.
+6. Tidak dipakai di proposal: berita PPDB 2019 tentang anak berkebutuhan khusus yang ditolak sekolah, karena tidak relevan untuk klien dan bernada kritik.
+
+Belum ditemukan: data guru dan siswa SMA Negeri 1, 2, 7, 8 dan SMK Negeri 4, 5, 6, serta daftar lengkap SD dan SMP inklusif (menunggu Keputusan Wali Kota dari Disdikbud Kota).
+
 ## 7. Keterbatasan riset
 Situs Dapodik (`dapo.kemendikdasmen.go.id`) menolak akses dari lingkungan ini sehingga jumlah siswa dan guru per sekolah tidak terambil. Pencarian web tidak menemukan daftar SD dan SMP inklusif. Seluruh data di atas dibaca langsung dari halaman resmi pada 15 Oktober 2026, bukan dari ringkasan.
 
