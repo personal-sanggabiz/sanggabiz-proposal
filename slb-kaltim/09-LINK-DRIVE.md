@@ -18,6 +18,8 @@ Dicatat 15 Oktober 2026 atas permintaan Muchson.
 | 15 Oktober 2026 | **v4 Pengganti Bab 2.3 Peserta dan Sekolah Sasaran** (Google Docs, 8 halaman: kuota per sekolah dari data nyata, 21 sekolah sasaran dengan kontak, jaringan pendukung, rujukan [16] sampai [28]). **Pakai yang ini.** | https://docs.google.com/document/d/1pRjfi4IBCL5NhBjIRJzRGrKwrFyGbcg4IpEEyKwxXOo/edit |
 | 15 Oktober 2026 | **v4 Lampiran D, data 274 SD dan SMP** (Google Sheet: NPSN, nama, jenjang, status, kecamatan, guru, siswa). Versi docx 6 halaman ada di `bagian-sasaran/` | https://docs.google.com/spreadsheets/d/1DGyr6VJERKMyjAZgXpKYyMvwTjajERQY2sx_fRch0hs/edit |
 
+**Catatan 16 Oktober 2026.** Dokumen v4 di Drive di atas masih versi sebelum perbaikan kategori (A sampai D, kolom Guru diundang, penjelasan kategori). Versi terbaru ada di `bagian-sasaran/v4 Pengganti Bab 2.3 ... .docx`. Unggahan ulang lewat alat gagal karena berkas terlalu panjang untuk dikirim sebagai teks. Seret berkas docx terbaru itu ke folder Drive untuk menggantikannya.
+
 Versi v1, v2, dan v3 di atas tetap disimpan sebagai arsip (v3 sudah digantikan v4). Sumber lokal: `bagian-sasaran/` (docx) dan skrip `_build/build_bagian_sasaran.js` (v3), `build_bagian_sasaran_v2.js`, `build_bagian_sasaran_v1.js`.
 
 ## Aturan pemakaian
