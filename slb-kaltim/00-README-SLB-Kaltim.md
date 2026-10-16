@@ -35,7 +35,7 @@ Nama klien/pemberi dana · tanggal pelaksanaan · angka budget. Makna "pertamini
 | `09-LINK-DRIVE.md` | Link folder Drive dan dokumen proposal utama (Google Docs) |
 | `10-RISET-SEKOLAH-SASARAN-DAN-KONTAK.md` | Riset nama, kontak, dan instansi pembina 4 SLB dan sekolah inklusif Balikpapan, serta daftar yang masih harus dicari |
 | `bagian-sasaran/` | Bagian "Sekolah Sasaran, Kontak, dan Jalur Pendaftaran Peserta" (docx) untuk ditempel manual ke proposal utama |
-| `daftar-sekolah/` | **v2 (pakai ini):** satu tabel ringkas 19 sekolah dengan target peserta per sekolah, total 80. **v1** (arsip): 17 sekolah lengkap dengan alamat, kontak, guru, siswa. Skrip: `_build/build_daftar_sekolah.js` (v2), `_v1.js` |
+| `daftar-sekolah/` | **v3 (pakai ini):** satu tabel ringkas 13 sekolah yang datanya lengkap dan statusnya jelas, target per sekolah total 80. v2 (19 sekolah) dan v1 (17 sekolah, lengkap dengan alamat dan kontak) disimpan sebagai arsip. Skrip: `_build/build_daftar_sekolah.js` (v3), `_v2.js`, `_v1.js` |
 | `proposal/` | **Proposal siap pakai (docx, portrait A4).** Pakai file berawalan `v2` |
 | `_build/` | Skrip pembuat proposal dan grafik, beserta foto dan logo |
 | `sumber/` | File asli yang diterima (docx) |

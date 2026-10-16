@@ -1,5 +1,5 @@
-// v2: daftar sekolah SLB dan inklusif Kota Balikpapan, kolom ringkas untuk proposal, dengan target peserta per sekolah (total 80).
-// Versi lama: build_daftar_sekolah_v1.js (12 kolom). Data dari ../10-RISET-SEKOLAH-SASARAN-DAN-KONTAK.md dan build_bagian_sasaran.js (v4).
+// v3: hanya sekolah yang datanya lengkap dan statusnya jelas (4 SLB, SMP Negeri 5, 8 SMA dan SMK inklusif), target total 80.
+// Versi lama: build_daftar_sekolah_v1.js (12 kolom), _v2.js (19 sekolah, termasuk yang belum terkonfirmasi). Data dari ../10-RISET-SEKOLAH-SASARAN-DAN-KONTAK.md dan build_bagian_sasaran.js (v4).
 // Jalankan: NODE_PATH=/opt/node-tools/node_modules node build_daftar_sekolah.js
 const fs = require("fs");
 const path = require("path");
@@ -20,24 +20,18 @@ const GROUPS = [
     ["SLB Dharma Kencana Balikpapan", "30402882", "SLB, SDLB sampai SMLB", "Swasta, B", "Balikpapan Kota", 10, 5],
     ["Sekolah Khusus Santo Fransiskus Assisi", "69965143", "SLB, TKLB sampai SMLB", "Swasta, B", "Balikpapan Kota", 13, 6],
   ] },
-  { label: "B. SD dan SMP inklusif. Target 24 peserta, 4 per kecamatan", rows: [
-    ["SD Negeri 008 Balikpapan Kota", "30402860", "SD inklusif", "Negeri, A", "Balikpapan Kota", 15, 2],
-    ["SD Negeri 003 Balikpapan Kota", "30401549", "SD inklusif", "Negeri, A", "Balikpapan Kota", 29, 2],
-    ["SMP Negeri 5 Balikpapan", "30401474", "SMP inklusif", "Negeri, A", "Balikpapan Selatan", 49, 4],
-    ["SMP Negeri 4 Balikpapan", "30401475", "SMP inklusif", "Negeri, A", "Balikpapan Barat", 50, 4],
-    ["SD IT Luqman Al-Hakim", "30402848", "SD inklusif", "Swasta, A", "Balikpapan Tengah", 13, 4],
-    ["[ISI TIM: sekolah inklusif Balikpapan Timur]", "-", "SD atau SMP inklusif", "-", "Balikpapan Timur", null, 4],
-    ["[ISI TIM: sekolah inklusif Balikpapan Utara]", "-", "SD atau SMP inklusif", "-", "Balikpapan Utara", null, 4],
+  { label: "B. SMP inklusif. Target 8 peserta, dua tim guru", rows: [
+    ["SMP Negeri 5 Balikpapan", "30401474", "SMP inklusif", "Negeri, A", "Balikpapan Selatan", 49, 8],
   ] },
-  { label: "C. SMA dan SMK inklusif. Target 16 peserta, 2 per sekolah", rows: [
-    ["SMA Negeri 1 Balikpapan", "30401491", "SMA inklusif", "Negeri, A", "Balikpapan Kota", 57, 2],
-    ["SMA Negeri 2 Balikpapan", "30401490", "SMA inklusif", "Negeri, A", "Balikpapan Utara", 51, 2],
-    ["SMA Negeri 4 Balikpapan", "30401488", "SMA inklusif", "Negeri, A", "Balikpapan Selatan", 47, 2],
-    ["SMA Negeri 7 Balikpapan", "30401504", "SMA inklusif", "Negeri, A", "Balikpapan Timur", 53, 2],
-    ["SMA Negeri 8 Balikpapan", "30402920", "SMA inklusif", "Negeri, A", "Balikpapan Barat", 45, 2],
-    ["SMK Negeri 4 Balikpapan", "30401508", "SMK inklusif", "Negeri, A", "Balikpapan Selatan", 67, 2],
-    ["SMK Negeri 5 Balikpapan", "30404599", "SMK inklusif", "Negeri, B", "Balikpapan Timur", 70, 2],
-    ["SMK Negeri 6 Balikpapan", "30409918", "SMK inklusif", "Negeri, B", "Balikpapan Utara", 75, 2],
+  { label: "C. SMA dan SMK inklusif. Target 32 peserta, 4 per sekolah", rows: [
+    ["SMA Negeri 1 Balikpapan", "30401491", "SMA inklusif", "Negeri, A", "Balikpapan Kota", 57, 4],
+    ["SMA Negeri 2 Balikpapan", "30401490", "SMA inklusif", "Negeri, A", "Balikpapan Utara", 51, 4],
+    ["SMA Negeri 4 Balikpapan", "30401488", "SMA inklusif", "Negeri, A", "Balikpapan Selatan", 47, 4],
+    ["SMA Negeri 7 Balikpapan", "30401504", "SMA inklusif", "Negeri, A", "Balikpapan Timur", 53, 4],
+    ["SMA Negeri 8 Balikpapan", "30402920", "SMA inklusif", "Negeri, A", "Balikpapan Barat", 45, 4],
+    ["SMK Negeri 4 Balikpapan", "30401508", "SMK inklusif", "Negeri, A", "Balikpapan Selatan", 67, 4],
+    ["SMK Negeri 5 Balikpapan", "30404599", "SMK inklusif", "Negeri, B", "Balikpapan Timur", 70, 4],
+    ["SMK Negeri 6 Balikpapan", "30409918", "SMK inklusif", "Negeri, B", "Balikpapan Utara", 75, 4],
   ] },
 ];
 
@@ -45,7 +39,7 @@ const sumT = (rows) => rows.reduce((t, r) => t + r[6], 0);
 const all = GROUPS.flatMap((g) => g.rows);
 const TOTAL = sumT(all);
 if (TOTAL !== 80) throw new Error("total target " + TOTAL + " bukan 80");
-[40, 24, 16].forEach((n, i) => { if (sumT(GROUPS[i].rows) !== n) throw new Error("subtotal kelompok " + i + " salah"); });
+[40, 8, 32].forEach((n, i) => { if (sumT(GROUPS[i].rows) !== n) throw new Error("subtotal kelompok " + i + " salah"); });
 
 // ---------- penolong ----------
 const thin = { style: BorderStyle.SINGLE, size: 4, color: LINE };
@@ -114,12 +108,12 @@ const note = (text) => new Paragraph({ children: runs(text, { size: 16, color: M
 
 const children = [
   new Paragraph({ heading: "Heading1", children: [new TextRun({ text: "Sekolah Sasaran dan Target Peserta di Kota Balikpapan" })] }),
-  p(`Kami mengundang ${TOTAL} guru dari ${all.length} sekolah: 4 SLB, 7 SD dan SMP inklusif, dan 8 SMA dan SMK inklusif. Dua sekolah di Balikpapan Timur dan Balikpapan Utara masih menunggu nama dari Dinas Pendidikan.`, { after: 140 }),
+  p(`Kami mengundang ${TOTAL} guru dari ${all.length} sekolah: 4 SLB, 1 SMP inklusif, dan 8 SMA dan SMK inklusif. Semua sekolah di tabel punya NPSN, status, akreditasi, kecamatan, dan jumlah guru yang tercatat, serta dasar penetapan atau sumber yang jelas.`, { after: 140 }),
   tabel,
   note("Target peserta adalah usulan Sanggabiz dan dapat disesuaikan dengan permintaan klien. Sekolah menunjuk sendiri gurunya."),
-  note("Aturan target. SLB: sekitar separuh guru tiap sekolah, supaya kegiatan belajar tetap berjalan. SD dan SMP inklusif: 4 guru per kecamatan, karena Peraturan Wali Kota Balikpapan Nomor 9 Tahun 2018 mewajibkan satu sekolah inklusif di tiap kecamatan. SMA dan SMK inklusif: 2 guru per sekolah, yaitu guru mata pelajaran dan guru pendamping khusus atau guru bimbingan konseling."),
-  note("Daftar SD dan SMP inklusif belum resmi karena Keputusan Wali Kota belum terbit di sumber publik. Lima sekolah di tabel berasal dari pernyataan Kepala Dinas (2019), berita 2024, dan penelitian 2023. [ISI TIM: nama sekolah Balikpapan Timur dan Utara, diminta ke Disdikbud Kota Balikpapan]"),
-  note("Sumber: guru tercatat dari portal Sekolah Kita, Kemendikdasmen, semester 2026/2027 Gasal. NPSN dan akreditasi dari Referensi Kemendikdasmen. Daftar SMA dan SMK inklusif dari Lampiran 9 Juknis SPMB SMA, SMK, dan SLB Kota Balikpapan 2025. Alamat dan kontak tiap sekolah ada di v1 daftar sekolah."),
+  note("Aturan target. SLB: sekitar separuh guru tiap sekolah, supaya kegiatan belajar tetap berjalan. SMA dan SMK inklusif: 4 guru per sekolah, yaitu guru mata pelajaran dan guru pendamping khusus atau guru bimbingan konseling. SMP Negeri 5: 8 guru, dua tim, karena ini satu-satunya SMP yang disebut konsisten oleh pejabat dinas dan penelitian (2019 sampai 2023). Jumlahnya dapat dikurangi bila dinas menambah SD dan SMP inklusif."),
+  note("Sekolah yang tidak dimasukkan. SD dan SMP inklusif lain belum masuk karena Keputusan Wali Kota yang menetapkannya belum terbit di sumber publik, dan sumber berita saling berbeda soal namanya. [ISI TIM: daftar SD dan SMP inklusif dari Disdikbud Kota Balikpapan, lalu tambahkan ke tabel dan kurangi target SMA, SMK, atau SMP Negeri 5]"),
+  note("Sumber: guru tercatat dari portal Sekolah Kita, Kemendikdasmen, semester 2026/2027 Gasal. NPSN dan akreditasi dari Referensi Kemendikdasmen. SMA dan SMK inklusif dari Lampiran 9 Juknis SPMB SMA, SMK, dan SLB Kota Balikpapan 2025. Alamat dan kontak tiap sekolah ada di v1 daftar sekolah."),
 ];
 
 const footer = new Footer({
@@ -152,5 +146,5 @@ const doc = new Document({
 
 const outDir = path.join(__dirname, "..", "daftar-sekolah");
 fs.mkdirSync(outDir, { recursive: true });
-const out = path.join(outDir, "v2 Sekolah Sasaran dan Target Peserta SLB dan Inklusif Balikpapan.docx");
+const out = path.join(outDir, "v3 Sekolah Sasaran dan Target Peserta SLB dan Inklusif Balikpapan.docx");
 Packer.toBuffer(doc).then((buf) => { fs.writeFileSync(out, buf); console.log("ditulis:", out, "| sekolah:", all.length, "guru:", guruTotal, "target:", TOTAL); });
