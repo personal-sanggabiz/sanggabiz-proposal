@@ -64,7 +64,7 @@ Tafsiran: 47 dari 56 lulusan (sekitar 84 persen) bekerja. Angka ini hitungan kam
 Plan menyebut tahap-tahap berikut. Pembagian tanggung jawab ada di bagian 7.
 
 1. Menyusun modul pemasaran digital. Plan sudah punya bahan bacaan dan modul awal, tetapi belum berbentuk video (A, C3).
-2. Pelatihan keterampilan teknis di dua jurusan: pemasaran digital, serta analisis data dengan optimalisasi AI. Modul analisis data sudah dimiliki Plan, "tinggal jalan" (A).
+2. Pelatihan keterampilan teknis di dua jurusan: pemasaran digital, serta analisis data (Plan menyebutnya "data analysis with AI optimization", keputusan tim 20 Oktober: jurusan Analisis Data, AI tetap ada, lihat `04-CATATAN-TIM.md` bagian 7). Modul analisis data sudah dimiliki Plan, "tinggal jalan" (A).
 3. Seri soft skill dan keterampilan digital dasar, termasuk branding digital (A).
 4. Pengetahuan tentang kesetaraan gender, disabilitas, dan inklusi sosial (GEDSI) serta perlindungan (safeguarding) di tempat kerja (A, C4).
 5. Kemitraan dengan swasta dan UMKM supaya peserta praktik di lapangan, bukan latihan semu (A).
@@ -83,7 +83,7 @@ Plan menyebut tahap-tahap berikut. Pembagian tanggung jawab ada di bagian 7.
 | Mulai pelatihan | Desember 2026 | C4 |
 | Rentang menurut TOR | November sampai Juli, lebih dari lima bulan (dikutip peserta rapat) | C10 |
 | Skema tiga tahap menurut TOR | Tiga bulan pelatihan, tiga bulan penempatan, tiga bulan mentoring pasca kerja (bulan 7 sampai 9) | C13 |
-| Pertemuan tatap muka | Sekitar 12 kali, belum termasuk soft skill, GEDSI, dan mentoring | C4 |
+| Pertemuan tatap muka | Sekitar 12 kali, belum termasuk soft skill, GEDSI, dan mentoring. Keputusan tim: 12 kali per jurusan | C4 |
 | Frekuensi | Bebas diusulkan vendor: sekali atau dua kali seminggu. Tahun lalu akhir pekan | C4 |
 | Durasi per pertemuan | Sekitar 3 jam dianggap pas. Lebih dari itu peserta cepat bosan. Jam dibahas bersama peserta | C6, C10 |
 | Jumlah kelas | 20 sampai 30 peserta per kelas. 150 peserta berarti 4 atau 5 kelas, bisa kelas pagi dan siang. Plan menyediakan dua ruang kelas untuk tiap pertemuan | C10 |

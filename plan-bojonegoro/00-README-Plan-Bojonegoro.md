@@ -9,9 +9,13 @@ Dibuat: 20 Oktober 2026. Status: **dasar pengetahuan sudah masuk, proposal belum
 ## Isi folder
 | File | Fungsi |
 |---|---|
+| `01-SPESIFIKASI-SILABUS.md` | Bentuk silabus yang harus dibuat (dari outline Lulu), tambahan agar sesuai Plan |
 | `02-FAKTA-DAN-KETENTUAN.md` | **Dasar pengetahuan utama.** Semua ketentuan dari rapat, dipilah per topik, dengan rujukan ke transkrip dan label tersurat atau tafsiran |
 | `04-CATATAN-TIM.md` | Daftar isian tim, pertanyaan untuk Plan, dan keputusan yang menunggu |
+| `sumber/chat-lulu-20-okt-2026.md` | Chat Muchson dan Lulu: pemateri eksternal batal, silabus dibuat Sanggabiz |
 | `sumber/transkrip-technical-meeting-asli.md` | Transkrip asli technical meeting 20 Oktober 2026, tidak diubah |
+| `silabus/` | **Silabus dalam xlsx**: Digital Marketing 12 pertemuan, Analisis Data dengan Optimalisasi AI 12 pertemuan, Soft Skill 2 pertemuan, rundown, dan timeline |
+| `reference/` | Outline asli Lulu (xlsx), bentuk acuan silabus. Tidak diubah |
 | `proposal/` | Tempat proposal. Masih kosong |
 
 Penomoran 01 dan 03 dikosongkan untuk langkah kerja dan riset, mengikuti pola folder SLB Kaltim.

@@ -29,3 +29,23 @@ Belum diperiksa. Saat menulis proposal, tarik portofolio dari `../Company Profil
 
 ## 5. Tidak dicampur dengan proyek lain
 Folder ini milik proposal Plan Indonesia. Jangan memakai aset atau klaim dari `../tanoto/` atau `../slb-kaltim/`.
+
+## 6. Tambahan dari Lulu (chat 20 Oktober 2026)
+Sumber asli: `sumber/chat-lulu-20-okt-2026.md`.
+
+- **Pemateri dari lembaga lain batal.** Kerja sama tidak jadi. Jangan menyebut mitra pemateri eksternal itu di proposal. Pelatih memakai tim Sanggabiz sendiri (lihat bagian 2 nomor 4 dan 5).
+- **Silabus dibuat Sanggabiz**, bukan dari Plan. Lulu menyusun outline lengkap dalam Google Sheets: https://docs.google.com/spreadsheets/d/1OqIbb7G640DNYkkjoWJO-KoJEzGQft-Y/edit . Isinya rincian kegiatan per sesi.
+- **Outline akan disederhanakan** untuk proposal (usul Lulu).
+- **Penempatan silabus belum final.** Muchson bertanya apakah masuk lampiran. Lulu menjawab "iya", lalu menambahkan bahwa di proposal ini kemungkinan dimasukkan ke isi. Putuskan: ringkasan di badan proposal, outline lengkap di lampiran.
+- Lulu menyusun draf proposal ("aku buatkan"). Cek bentuknya sebelum digabung dengan dasar pengetahuan di folder ini.
+- Spreadsheet belum dibaca dan belum disalin ke `sumber/`. Silabus nanti harus dicocokkan dengan ketentuan Plan (12 pertemuan sekitar 3 jam, dua jurusan, soft skill, GEDSI, dan safeguarding) di `02-FAKTA-DAN-KETENTUAN.md` bagian 5 dan 6.
+
+## 7. Keputusan Muchson, 20 Oktober 2026 (sore)
+1. Dua jurusan: **Digital Marketing** dan **Analisis Data**. Peserta kemungkinan memilih satu.
+2. **12 pertemuan per jurusan**, mengikuti Plan. Lulu adalah tim internal Sanggabiz, yang mengikat adalah ketentuan Plan.
+3. Silabus Analisis Data dibuat oleh tim kita. **AI tetap ada**: ikuti kata Plan, "data analysis with AI optimization". Nama jurusan: Analisis Data dengan Optimalisasi AI. (Pernyataan awal "tanpa AI" dikoreksi Muchson.)
+4. Soft skill 2 materi, dan 12 materi per jurusan (Digital Marketing 12, Analisis Data dengan AI 12): dari Lulu, chat 12:06-12:07. Belum jelas apakah satu "materi" sama dengan satu pertemuan 3 jam.
+5. Rujukan SKKNI Analisis Data: lihat `01-SPESIFIKASI-SILABUS.md` bagian 6.
+
+## 8. Silabus, status 20 Oktober 2026
+Berkas: `silabus/Silabus Plan Bojonegoro - ....xlsx`. Content Creator keluar, DM-3 baru ditambahkan (lihat `01-SPESIFIKASI-SILABUS.md` bagian 8). Yang masih perlu: tinjauan Lulu atas DM-3, tinjauan trainer atas kolom Aktivitas, dan konfirmasi Plan atas blok GEDSI.

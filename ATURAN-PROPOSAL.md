@@ -37,12 +37,46 @@ Silabus ditulis per sesi dan per topik, cukup rinci supaya semua pembaca memaham
 5. Tidak ada istilah yang bisa dibaca dua arti. Bila memakai istilah teknis, jelaskan sekali di tempat pertama muncul.
 
 ## 4. Anggaran untuk klien
+0. Semua angka mengikuti `STANDAR-HARGA.md` (rentang harga, rumus keuntungan dan pajak, harga yang tidak diambil). Butir di bawah mengatur cara menampilkannya ke klien.
 1. Tampilkan satu opsi, yaitu paket paling ekonomis yang tetap memenuhi tujuan dan hasil program. Opsi lain hanya bila klien memintanya.
-2. Dokumen klien tidak memuat hitungan internal: tidak ada baris biaya manajemen, cadangan, margin, atau subtotal sebelum pajak.
-3. Biaya manajemen, cadangan, dan pajak dimasukkan ke komponen produk yang memang bernilai bagi klien, misalnya penyusunan modul, bahan ajar interaktif, pre-test dan post-test, rekrutmen peserta, dan tindak lanjut.
-4. Total ditulis "sudah termasuk pajak". Rincian hitungan internal disimpan di catatan tim, bukan di dokumen klien.
+2. Dokumen klien memuat satu baris Fee sebesar 10 persen dari biaya langsung (arahan Pak Priyo, 17 Oktober 2026, lihat `ARAHAN-PRIYO.md`). Tidak ada baris cadangan atau margin lain. Keuntungan tidak disembunyikan di harga perabot atau barang lain.
+3. Setiap komponen ditulis per baris dengan volume dan harga satuan, tidak digabung ke satu item besar. Biaya kecil yang belum sempat dirinci ditutup dengan pembulatan harga satuan dan kelebihan porsi konsumsi, dengan harga tetap di dalam rentang `STANDAR-HARGA.md`.
+4. Pajak: tulis "sudah termasuk pajak" atau tampilkan baris PPN bila klien meminta. Rincian hitungan internal disimpan di catatan tim, bukan di dokumen klien.
+(Butir 2 sampai 4 direvisi pada 17 Oktober 2026. Versi sebelumnya melarang baris biaya manajemen dan menyerap fee ke komponen produk.)
 5. Honor pemateri dan harga tempat memakai acuan pasar atau standar biaya pemerintah yang dapat ditunjukkan. Pemateri lokal bila ada, untuk meniadakan biaya mobilisasi.
 6. Jumlah pengajar sesuai kebutuhan nyata. Tidak menambah orang agar terlihat besar.
+
+## 4a. Menyusun proposal dari proses bisnis
+Usul Pak Priyo Pamungkas (Sanggabiz), diteruskan Muchson pada 17 Oktober 2026 saat membahas anggaran SLB Kaltim. Berlaku untuk proposal berikutnya. Kutipan chat, tidak diubah:
+
+> trus untuk teknisnya :
+> cb kamu break down dulu bisnis prosesnya. nah penganggaran mengikuti itu proses bisnisnya
+>
+> kalo gw break down :
+> 1. Scrapping data SLB/Pengajar
+> 2. Komunikasi dan Proses mengundang SLB/Pengajar
+> 3. Pembuatan Modul
+> 4. Teknis Acara
+> 5. Monev (bisa bentuk survey atau monitoring implementasi)
+> 6. Laporan
+
+Cara memakainya (tafsiran Claude, koreksi bila keliru):
+1. Ini cara menyusun proposal secara umum, bukan aturan pengelompokan tabel anggaran. Mulai dengan memecah proses bisnis program menjadi tahap. Isi proposal (rundown, silabus, tim, anggaran) lalu mengikuti tahap itu.
+2. Enam tahap di atas adalah contoh dari program pelatihan guru SLB Kaltim. Proposal lain menulis tahapnya sendiri sesuai programnya, dengan urutan yang mengikuti alur kerja nyata.
+3. Anggaran mengikuti proses. Setiap baris biaya bisa ditelusuri ke satu tahap, dan setiap tahap yang punya pekerjaan punya biaya, atau ditulis diserap di baris mana. Bentuk tabel anggaran tidak harus sama dengan tahap. Bila klien punya templat sendiri, ikuti templat klien.
+4. Biaya yang melintasi tahap, misalnya manajer proyek, dicatat sebagai biaya lintas tahap atau di tahap yang paling banyak memakainya.
+5. Harga tiap baris tetap mengikuti `STANDAR-HARGA.md`.
+6. Monev adalah singkatan monitoring dan evaluasi. Monitoring memantau jalannya program, evaluasi menilai hasilnya.
+
+Pekerjaan dan biaya yang lazim per tahap (tafsiran Claude):
+| Tahap | Pekerjaan dan biaya |
+|---|---|
+| 1. Pendataan SLB dan pengajar | Daftar sekolah dan guru, kontak, kuota per sekolah |
+| 2. Komunikasi dan undangan | Kunjungan sekolah, surat undangan, formulir pendaftaran, konfirmasi, pengingat |
+| 3. Pembuatan modul | Modul, templat, instrumen tes, bahan ajar |
+| 4. Teknis acara | Tempat, perabot, konsumsi, perlengkapan, pemateri, MC, fasilitator, dokumentasi, transport peserta |
+| 5. Monev | Survei kepuasan, pre-test dan post-test, pemantauan penerapan di kelas |
+| 6. Laporan | Laporan akhir |
 
 ## 5. Tempat pelaksanaan
 1. Tulis nama hotel atau gedung, alamat, nama ruang lengkap, ukuran ruang (panjang kali lebar atau meter persegi), kapasitas per susunan, dan harga acuan.

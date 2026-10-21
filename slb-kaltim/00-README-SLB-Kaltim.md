@@ -6,6 +6,8 @@
 
 Dibuat: 7 Okt 2026 · Status: **Info primer dari Pak Priyo sudah masuk** (`05-INFO-PRIMER-PAK-PRIYO.md`). Riset Langkah 1 selesai sebagian
 
+**Status 17 Okt 2026: proposal sudah dikirim ke klien (Pertamina) dan anggarannya tidak diubah lagi.** Jangan merevisi tabel anggaran proyek ini. Pelajaran dari pembahasan anggarannya ada di `../STANDAR-HARGA.md` bagian 10, dan arahan Pak Priyo di `../ARAHAN-PRIYO.md`.
+
 ## 1. Yang sudah diketahui
 Sumber primer: chat Pak Priyo 6 Okt 2026 (`05-INFO-PRIMER-PAK-PRIYO.md`, ada kesimpulan di atas dan chat asli di bawah). Kutipan, bukan tafsiran:
 | Hal | Tertulis di chat |
