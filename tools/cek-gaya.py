@@ -59,7 +59,7 @@ def baris_md(path):
 
 def periksa(path):
     path = Path(path)
-    if path.name in ABAIKAN or "sumber" in path.parts:
+    if path.name in ABAIKAN or "sumber" in path.parts or "reference" in path.parts:
         return 0
     if path.suffix == ".md" and "<!-- salinan-sumber -->" in path.read_text(encoding="utf8"):
         return 0
