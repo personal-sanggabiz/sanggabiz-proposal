@@ -83,3 +83,65 @@ Dokumen memakai Montserrat. Pasang font dari `../tanoto/fonts/` di komputer yang
 ## 7. Sebelum dikirim
 - Jalankan `python3 tools/cek-gaya.py slb-kaltim/proposal` dari akar repo.
 - Hapus semua stabilo kuning dan simpan sebagai PDF untuk dikirim.
+
+---
+
+# CATATAN V3: Proposal dari Sudut Pandang Event Organizer (5 November 2026)
+
+File: `proposal/v3 Proposal EO Workshop Pembelajaran Berdiferensiasi - SLB dan SD Balikpapan.docx` (14 halaman). Skrip: `_build/build_proposal_v3.js`. Skrip v2 disimpan di `_build/build_proposal_v2.js`.
+
+Dasar v3 adalah docx v2 yang sudah diedit tim (tersimpan sebagai arsip di `proposal/` dengan tambahan "revisi tim 5 November 2026"), bukan v2 hasil skrip. Daftar sekolah dan kuota dari `data/kuota-27-sekolah.csv`, dua gambar daftar Pertamina Foundation ada di `sumber/`.
+
+## 1. Yang berubah dari v2
+1. Peran Sanggabiz hanya event organizer. Silabus per sesi, pemateri, modul, template, bahan ajar, dan lampiran modul dihapus. Bagian 1.2 sekarang memuat pembagian pekerjaan.
+2. Indikator keberhasilan diganti dengan ukuran penyelenggaraan: kehadiran, sebaran 27 sekolah, ketepatan waktu, kepuasan, laporan. Pre-test, post-test, produk modul, dan tindak lanjut empat minggu dihapus.
+3. Sasaran menjadi 27 sekolah (3 SLB dan 24 SD) dengan kuota 80 guru, dari daftar Pertamina Foundation. Tabel 13 sekolah SLB, SMP, SMA, dan SMK diganti.
+4. Rekrutmen: komunikasi ke 27 sekolah mulai Jumat 6 November, surat Dinas Pendidikan dan Kebudayaan Provinsi Kaltim diperkirakan terbit Senin 9 November lalu dikirim personel sambil advokasi, hari acara Rabu 11 November. Jadwal H-21 dan H-7 dihapus.
+5. Waktu: registrasi dan makan siang 12.00, acara inti 13.00 WITA. Seluruh jam memakai WITA (v2 memakai WIB di rundown).
+6. Bab 3 menjadi alur kerja (ADDIE untuk alur, tahap dari proses bisnis Pak Priyo, lihat `../ATURAN-PROPOSAL.md` bagian 4a). Andragogi, Bloom, dan Kirkpatrick dihapus karena menyangkut isi pelatihan.
+7. Bab 6 menjadi susunan tim Sanggabiz. Profil pemateri dihapus.
+8. Rujukan dirapikan menjadi 11 butir, hanya yang dikutip di teks. Perwali dikutip sebagai Nomor 9 Tahun 2018 dengan tautan BPK.
+
+## 2. Isian tim (stabilo kuning)
+| Bagian | Isian |
+|---|---|
+| Surat pengantar | Nomor surat, penerima, instansi, penandatangan, kontak |
+| Bab 2.1 | Nama gedung, alamat, ruang Kantor Pertamina. Tata suara, listrik, parkir, Wi-Fi. Apakah tempat gratis. Akses kursi roda dan toilet |
+| Bab 2.2 | Konfirmasi tanggal 11 November 2026 (dari pesan "Rabu depan kemungkinan") |
+| Bab 2.3 | Nama sekolah nomor 20: daftar Pertamina Foundation menulis "SDB 009 Balikpapan Utara" |
+| Bab 6 | Nama project manager, petugas advokasi, MC |
+| Bab 7 | Kontak penghubung |
+
+## 3. Hitungan anggaran v3
+Total Rp 42.450.000 (sudah termasuk pajak), per peserta Rp 531.000. Angka diambil dari tabel di docx v2 revisi tim, hanya baris advokasi yang dihitung ulang.
+| Kelompok | Rp |
+|---|---|
+| A. Personel (project manager 4.000.000, MC 1.000.000) | 5.000.000 |
+| B. Equipment dan konsumsi | 20.350.000 |
+| C. Transport lokal (peserta 8.000.000, advokasi 27 x 300.000 = 8.100.000) | 16.100.000 |
+| D. Monitoring, dokumentasi, laporan | 1.000.000 |
+| Total | 42.450.000 |
+
+Temuan pada docx v2 revisi tim:
+1. Subtotal A tertulis 10.000.000 dan B 23.350.000, padahal jumlah barisnya 5.000.000 dan 20.350.000. Selisih 5.000.000 dan 3.000.000 kemungkinan dari baris yang sudah dihapus. Total lama 46.250.000 ikut salah. v3 menghitung ulang dari baris.
+2. Advokasi dihitung 13 sekolah (3.900.000). Di v3 menjadi 27 sekolah (8.100.000).
+3. Teks v2 menulis tempat tanpa biaya, sedangkan tabel memuat Venue 7.000.000. v3 mempertahankan baris itu dan menandai pertanyaannya ke tim.
+4. Konsumsi di teks 90 orang, di tabel 85. v3 memakai 85 dan menjelaskan dasarnya.
+5. Tidak ada baris Fee 10 persen. `ATURAN-PROPOSAL.md` bagian 4 mewajibkannya. Belum ditambahkan karena tim belum meminta.
+6. Makan siang Rp 50.000 melewati batas atas `STANDAR-HARGA.md` (Rp 39.000 tanpa penawaran katering). Perlengkapan peserta Rp 35.000 di bawah batas bawah kit Rp 60.000, tetapi isi kit v3 tidak memuat buku kerja dan modul cetak. Monitoring dan laporan Rp 1.000.000 di bawah batas bawah Rp 2.500.000, dan sekarang juga menanggung dokumentasi foto.
+7. Pendataan sekolah tidak punya baris sendiri. v3 menulis diserap di A.1.
+
+## 4. Yang perlu dicek
+1. Kuota per sekolah adalah hitungan tim (persen penerima dikali 80, dibulatkan agar total 80). Kuota 8,0 untuk SLB Tunas Bangsa tertulis 7 dan 9,6 untuk SLB Dharma Kencana tertulis 9, jadi pembulatan tidak seragam. v3 menulis "dibulatkan agar total tepat 80".
+2. Angka ragam disabilitas (29 tuna daksa, 8 tuna rungu, 7 tuna grahita, 3 tuna netra, 2 tuna ganda, 1 disabilitas fisik) dihitung Claude dari dua gambar daftar. Cocokkan dengan dokumen asli. Gambar yang diterima mungkin tidak memuat semua halaman daftar.
+3. Kecamatan SLB Dharma Kencana (Kota), Tunas Bangsa dan SLB Negeri (Selatan) diambil dari tabel v2 sebelumnya. Kecamatan SD dari nama sekolah, kecuali As'adiyah dan GPIB dari data Sekolah Kita (Barat).
+4. SD berada di bawah Pemerintah Kota. Surat Dinas Pendidikan Provinsi mungkin tidak mengikat SD. Risiko ini ada di bab 2.3.
+5. Acara inti diperpendek dari 5 jam menjadi 4,5 jam (13.00 sampai 17.30 WITA) dengan blok materi 190 menit, supaya selesai sebelum Maghrib dan memuat jeda Ashar. Blok materi v2 berjumlah 255 menit. Sesuaikan bila narasumber butuh lebih lama.
+6. Skema susunan ruang (Gambar 4) masih memakai label "area pemateri". Susunan 8 kelompok dan 9 meja mengikuti baris meja di anggaran.
+7. Jalankan ulang pemeriksa gaya sebelum kirim: `python3 tools/cek-gaya.py slb-kaltim`.
+
+## 5. Membuat ulang
+```
+cd slb-kaltim/_build
+NODE_PATH=$(npm root -g) node build_proposal_v3.js
+```

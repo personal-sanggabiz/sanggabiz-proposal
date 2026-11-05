@@ -37,9 +37,10 @@ Nama klien/pemberi dana · tanggal pelaksanaan · angka budget. Makna "pertamini
 | `09-LINK-DRIVE.md` | Link folder Drive dan dokumen proposal utama (Google Docs) |
 | `10-RISET-SEKOLAH-SASARAN-DAN-KONTAK.md` | Riset nama, kontak, dan instansi pembina 4 SLB dan sekolah inklusif Balikpapan, serta daftar yang masih harus dicari |
 | `bagian-sasaran/` | Bagian "Sekolah Sasaran, Kontak, dan Jalur Pendaftaran Peserta" (docx) untuk ditempel manual ke proposal utama |
-| `proposal/` | **Proposal siap pakai (docx, portrait A4).** Pakai file berawalan `v2` |
+| `proposal/` | **Proposal siap pakai (docx, portrait A4).** Pakai file berawalan `v3` (sudut pandang event organizer, 5 Nov 2026). `v2` tersimpan sebagai arsip |
 | `_build/` | Skrip pembuat proposal dan grafik, beserta foto dan logo |
-| `sumber/` | File asli yang diterima (docx) |
+| `sumber/` | File asli yang diterima (docx, dan dua gambar daftar penerima beasiswa Pertamina Foundation) |
+| `data/kuota-27-sekolah.csv` | Kuota 80 guru untuk 27 sekolah sasaran v3 |
 
 Berikutnya: data Dapodik lengkap, lalu opsi judul, paket Hemat/Standar/Ideal, dan draf proposal.
 
