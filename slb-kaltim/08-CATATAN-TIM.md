@@ -106,30 +106,27 @@ Dasar v3 adalah docx v2 yang sudah diedit tim (tersimpan sebagai arsip di `propo
 | Bagian | Isian |
 |---|---|
 | Surat pengantar | Nomor surat, penerima, instansi, penandatangan, kontak |
-| Bab 2.1 | Nama gedung, alamat, ruang Kantor Pertamina. Tata suara, listrik, parkir, Wi-Fi. Apakah tempat gratis. Akses kursi roda dan toilet |
+| Bab 2.1 | Nama gedung, alamat, ruang Kantor Pertamina. Tata suara, listrik, parkir, Wi-Fi. Akses kursi roda dan toilet |
 | Bab 2.2 | Konfirmasi tanggal 11 November 2026 (dari pesan "Rabu depan kemungkinan") |
 | Bab 2.3 | Nama sekolah nomor 20: daftar Pertamina Foundation menulis "SDB 009 Balikpapan Utara" |
-| Bab 6 | Nama project manager, petugas advokasi, MC |
+| Bab 6 | Nama project manager, project local, petugas advokasi, MC, dan dokumentasi |
 | Bab 7 | Kontak penghubung |
 
 ## 3. Hitungan anggaran v3
-Total Rp 42.450.000 (sudah termasuk pajak), per peserta Rp 531.000. Angka diambil dari tabel di docx v2 revisi tim, hanya baris advokasi yang dihitung ulang.
+Total Rp 44.550.000 (sudah termasuk pajak), per peserta Rp 557.000. Angka mengikuti tabel dari tim (gambar 5 November 2026). Tidak ada baris Fee, sesuai keputusan tim.
 | Kelompok | Rp |
 |---|---|
-| A. Personel (project manager 4.000.000, MC 1.000.000) | 5.000.000 |
-| B. Equipment dan konsumsi | 20.350.000 |
-| C. Transport lokal (peserta 8.000.000, advokasi 27 x 300.000 = 8.100.000) | 16.100.000 |
-| D. Monitoring, dokumentasi, laporan | 1.000.000 |
-| Total | 42.450.000 |
+| A. Personel (project manager 5.000.000, project local 3.000.000, MC 2 orang 1.000.000, dokumentasi 3.000.000) | 12.000.000 |
+| B. Materi dan equipment | 16.450.000 |
+| C. Transport dan advokasi (peserta 8.000.000, advokasi 27 x 300.000 = 8.100.000) | 16.100.000 |
+| Total | 44.550.000 |
 
-Temuan pada docx v2 revisi tim:
-1. Subtotal A tertulis 10.000.000 dan B 23.350.000, padahal jumlah barisnya 5.000.000 dan 20.350.000. Selisih 5.000.000 dan 3.000.000 kemungkinan dari baris yang sudah dihapus. Total lama 46.250.000 ikut salah. v3 menghitung ulang dari baris.
-2. Advokasi dihitung 13 sekolah (3.900.000). Di v3 menjadi 27 sekolah (8.100.000).
-3. Teks v2 menulis tempat tanpa biaya, sedangkan tabel memuat Venue 7.000.000. v3 mempertahankan baris itu dan menandai pertanyaannya ke tim.
-4. Konsumsi di teks 90 orang, di tabel 85. v3 memakai 85 dan menjelaskan dasarnya.
-5. Tidak ada baris Fee 10 persen. `ATURAN-PROPOSAL.md` bagian 4 mewajibkannya. Belum ditambahkan karena tim belum meminta.
-6. Makan siang Rp 50.000 melewati batas atas `STANDAR-HARGA.md` (Rp 39.000 tanpa penawaran katering). Perlengkapan peserta Rp 35.000 di bawah batas bawah kit Rp 60.000, tetapi isi kit v3 tidak memuat buku kerja dan modul cetak. Monitoring dan laporan Rp 1.000.000 di bawah batas bawah Rp 2.500.000, dan sekarang juga menanggung dokumentasi foto.
-7. Pendataan sekolah tidak punya baris sendiri. v3 menulis diserap di A.1.
+Hal yang perlu diketahui:
+1. Tempat tanpa biaya. Tidak ada baris venue, evaluasi, atau laporan. Pendataan sekolah, monev, dan laporan tertulis diserap di A.1 dan A.2.
+2. Konsumsi dan kursi 90 porsi. Perlengkapan peserta 80 orang.
+3. Tidak ada baris Fee 10 persen (`ATURAN-PROPOSAL.md` bagian 4). Tim memutuskan tidak menambahnya.
+4. Terhadap `STANDAR-HARGA.md`: project local Rp 3.000.000 per bulan di bawah UMK Balikpapan (sekitar Rp 4.344.068). Harga lain berada di dalam rentang: makan siang Rp 35.000, snack Rp 20.000, transport peserta Rp 100.000, advokasi Rp 300.000 per sekolah, dokumentasi dengan video dan 5 reels Rp 3.000.000.
+5. Docx v2 revisi tim memuat subtotal yang tidak cocok dengan barisnya. Tabel v3 dihitung ulang dari baris.
 
 ## 4. Yang perlu dicek
 1. Kuota per sekolah adalah hitungan tim (persen penerima dikali 80, dibulatkan agar total 80). Kuota 8,0 untuk SLB Tunas Bangsa tertulis 7 dan 9,6 untuk SLB Dharma Kencana tertulis 9, jadi pembulatan tidak seragam. v3 menulis "dibulatkan agar total tepat 80".
